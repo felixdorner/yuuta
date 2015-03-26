@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	  
 	  <div class="footer-branding">
-	  	<?php if ( jetpack_has_site_logo() ) : 
+	  	<?php if ( ( function_exists( 'jetpack_the_site_logo' ) && jetpack_has_site_logo() ) ) : 
 				jetpack_the_site_logo(); 
 			else : ?>
 	    	<h3 class="site-title"><?php bloginfo( 'name' ); ?></h3>

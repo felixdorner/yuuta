@@ -36,7 +36,7 @@
 /* Calendar */
 .widget_calendar th,
 .widget_calendar td {
-	border-color: transparentize(white, 0.9);
+	border-color: transparentize(black, 0.9);
 }
 
 /* Search Widget */
@@ -44,6 +44,6 @@
 	font-size: .8em;
 
 	@include placeholder {		
-    color: transparentize(white, 0.7);
+    color: black;
   }
 }

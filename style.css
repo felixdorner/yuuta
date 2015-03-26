@@ -663,7 +663,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: transparent;
   border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: none;
   padding: 0.5em 0.5em;
   width: 100%;
@@ -2647,7 +2647,7 @@ figure.alignleft {
 /* Calendar */
 .widget_calendar th,
 .widget_calendar td {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Search Widget */
@@ -2655,16 +2655,16 @@ figure.alignleft {
   font-size: .8em;
 }
 .widget_search input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .widget_search input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .widget_search input:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .widget_search input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 
 /*--------------------------------------------------------------
@@ -2702,7 +2702,7 @@ figure.alignleft {
   color: rgba(0, 0, 0, 0.6);
 }
 .site-footer .colophon a:hover {
-  opacity: .4;
+  color: black;
 }
 
 .footer-branding {
@@ -2741,12 +2741,6 @@ figure.alignleft {
   font-size: 1.2em;
   margin-bottom: 1em;
   text-transform: uppercase;
-}
-
-.social-links i {
-  display: inline-block;
-  margin: 15px 0.4em 0;
-  font-size: 1.4em;
 }
 
 /*--------------------------------------------------------------

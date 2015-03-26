@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+13. Navigation
+--------------------------------------------------------------*/
+
+.site-navigation-wrapper {
+	/* by default it's hidden - on bottom of the viewport */
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(white, .92);
+	z-index: $nav-zindex;
+	padding: $spacing-l 0;	
+	opacity: 1;	
+
+	@include backface-visibility(hidden);
+
+	// Flexbox
+	@include align-items(center);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+
+	overflow: auto;
+	/* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+	-webkit-overflow-scrolling: touch;
+
+	@include transform(translateY(-100%));
+	@include transition-property(transform);
+	@include transition-duration(.2s);
+	//@include transition(all .2s linear);
+
+	&.is-visible {
+		@include transform(translateY(0));
+		opacity: 1;
+	}
+
+	@include media($medium-screen) {
+		padding: $spacing-xl 0;
+	}
+}
+
+.main-navigation {
+	text-align: center;
+	opacity: 0;
+	//visibility: hidden;
+
+	@include transition(all .8s ease-in-out);
+	@include transition-delay(0.2s);
+
+	ul {
+		padding: 0 0 $spacing-m;
+	}
+
+	li {
+		font-size: 1em;
+		text-transform: uppercase;
+		font-family: $alt-font-family;
+		font-weight: 700;
+		padding: $spacing-s 0;
+		border-bottom: 1px solid rgba(white, .2);
+
+		@include media($medium-screen) {
+			font-size: 1.6em;
+		}
+
+	}
+
+	li:last-child {		
+		border: none;
+	}
+
+	a {
+		color: black;
+		display: inline-block;	
+
+		.no-touch &:hover {
+			color: rgba(black, .6);
+		}
+	}
+
+	.children {
+		padding: 0 0 0 0;
+
+		li {
+			font-size: .6em;
+			border: none;
+			padding-bottom: .4em;
+			padding-top: .4em;
+
+			@include media($medium-screen) {
+				font-size: .7em;
+			}
+
+			ul {
+				padding: 0;
+
+				li {
+					padding-bottom: .2em;
+					padding-top: .2em;
+				}
+			}
+		}
+		
+		li:last-child {
+			margin-bottom: 0;
+			border: none;
+		}
+	}
+
+}
+
+.site-navigation-wrapper.is-visible .main-navigation {
+	//visibility: visible;
+	opacity: 1;
+}
+

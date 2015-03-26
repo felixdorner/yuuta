@@ -1,0 +1,254 @@
+/*--------------------------------------------------------------
+Typographic styles for the post editor
+--------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+.mceContentBody {
+  color: #151515;
+  font-size: 16px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+
+  text-rendering: optimizeLegibility;
+}
+
+.mceContentBody a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 1;
+  border-bottom: 2px solid;
+  border-color: rgba(0,0,0,.1); 
+}
+
+.mceContentBody a:hover {
+  color: inherit;
+  text-decoration: none;  
+}
+
+.mceContentBody h1,
+.mceContentBody h2,
+.mceContentBody h3,
+.mceContentBody h4,
+.mceContentBody h5,
+.mceContentBody h6 {
+  clear: both;
+  margin-bottom: .6em;
+  font-family: 'Roboto Slab', Open Sans, Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+}
+
+.mceContentBody h1 {
+  font-size: 3.8em;
+}
+
+.mceContentBody h2 {
+  font-size: 2.8em;
+}
+
+.mceContentBody h3 {
+  font-size: 2.2em;
+}
+
+.mceContentBody h4 {
+  font-size: 1.6em;
+}
+
+.mceContentBody h5 {
+  font-size: 1.4em;
+}
+
+.mceContentBody h6 {
+  font-size: 1.2em;
+}
+
+hr {
+  margin: 5% 0;
+  height: 2px;
+  border: 0;
+  border-bottom: solid 1px #eee;
+  background-color: transparent;
+}
+
+.mceContentBody blockquote {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 4% 0;
+}
+
+.mceContentBody blockquote p {
+  position: relative;
+  margin: 1em 0 0 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  font-family: 'Roboto Slab', Open Sans, Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+}
+
+.mceContentBody ul,
+.mceContentBody ol {
+  margin: 0 0 30px 30px;
+  line-height: 2em;
+  padding-left: 0;
+}
+
+.mceContentBody ul {
+  list-style: disc;
+}
+
+.mceContentBody ol {
+  list-style: decimal
+}
+
+.mceContentBody ul ul,
+.mceContentBody ol ol,
+.mceContentBody ul ol,
+.mceContentBody ol ul {
+  margin: .6em 0 .6em 1.5em;
+}
+
+.mceContentBody img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+Table Styles
+--------------------------------------------------------------*/
+
+table {
+  margin-bottom: 5%;
+  padding: 0;
+  width: 100%;
+  font-size: 1em;
+}
+
+table thead {
+  background: #eee;
+}
+
+table td,
+#content table th {
+  padding: 10px
+}
+
+table td {
+  border-bottom: solid 1px #f5f5f5
+}
+
+table tr:last-child td {
+  border-bottom: none
+}
+
+table tr:nth-child(even) {
+  background: #f5f5f5
+}
+
+/*--------------------------------------------------------------
+Code Styles
+--------------------------------------------------------------*/
+
+pre {
+  overflow: auto;
+  margin-bottom: 30px;
+  padding: 30px;
+  max-width: 100%;
+  background: #f5f5f5;
+  font-family: 'Courier', monospace;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+/*--------------------------------------------------------------
+Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin: .5em 2em 1.5em 0;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin: .5em 0 1.5em 2em;
+}
+
+.aligncenter {
+  display: block;
+  clear: both;
+  margin: .5em auto 1.5em auto;
+  text-align: center;
+}
+
+.alignnone,
+a img.alignnone {
+  margin: .5em 2em 1.5em 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: .5em auto 1.5em auto;
+}
+
+.alignright,
+a img.alignright {
+  float: right;
+  margin: .5em 0 1.5em 2em;
+}
+
+.alignleft,
+a img.alignleft {
+  float: left;
+  margin: .5em 2em 1.5em 0;
+}
+
+.aligncenter,
+a img.aligncenter {
+  display: block;
+  margin: .5em auto 1.5em auto;
+}
+
+.wp-caption {
+  margin: .5em 0 1.5em 0;
+  padding: 0;
+  max-width: 100%;
+  border: none;
+  background: none;
+}
+
+.wp-caption img[class*='wp-image-'] {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+}
+
+.wp-caption-dd,
+.wp-caption-text,
+.gallery-caption {
+  margin-top: 15px;
+  width: 100%;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .6em;
+}
+
+.wp-caption.alignnone {
+  margin: .5em 2em 1.5em 0;
+}
+
+.wp-caption.alignleft {
+  margin: .5em 2em 1.5em 0;
+}
+
+.wp-caption.alignright {
+  margin: .5em 0 1.5em 2em;
+}
+
+.wp-caption.aligncenter {
+  text-align: center;
+}

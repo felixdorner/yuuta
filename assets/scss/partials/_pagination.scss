@@ -1,0 +1,76 @@
+/*--------------------------------------------------------------
+18. Pagination
+--------------------------------------------------------------*/
+
+.post-navigation,
+.posts-navigation {
+	float: left;
+	width: 100%;
+	background: $light-gray;
+	border-bottom: 1px solid #e5e5e5;
+	//@include outer-container;
+}
+
+.post-navigation .nav-links,
+.posts-navigation .nav-links {
+	text-transform: uppercase;
+	font-size: .6em;
+	letter-spacing: .2em;
+	line-height: 1.2em;
+
+	.nav-previous,
+	.nav-next {
+		@include span-columns(6 of 12);									
+		@include transition(all 0.2s linear);
+		padding: $spacing-xs 10px;		
+
+		a {
+			color: transparentize(black, .4);
+		}				
+
+		& a:hover {
+			color: #000;				
+		}
+
+		@include media($medium-screen) {
+			padding: $spacing-s $spacing-s;
+		}	
+
+	}
+
+	.nav-previous a:before,
+	.nav-next a:after {
+		position: relative;
+		top: .12em;
+		font-family: "ElegantIcons";		
+    font-size: 1.2em;
+    line-height: .8em;
+	}
+
+	.nav-previous {
+		text-align: left;
+		
+		& a:before {
+	    content: "\34";
+	    margin-right: .2em;
+		}			
+	}
+
+	.nav-next {			
+		text-align: right;
+		@include reset-display;
+		float: right;
+		
+		& a:after {
+	    content: "\35";
+	    margin-left: .2em;
+		}
+	}	
+
+}
+
+// .post-navigation .nav-links {
+// 	max-width: 920px;
+//   margin-left: auto;
+//   margin-right: auto;	
+// }

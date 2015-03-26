@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------
+07. Lists
+--------------------------------------------------------------*/
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+dl {
+  margin-bottom: $spacing-m;
+
+  dt {
+    font-weight: bold;
+    margin-top: $base-spacing / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+/* Entry Lists */
+
+.entry-content ul,
+.comment-entry ul,
+.entry-content ol,
+.comment-entry ol {
+  color: inherit;
+  margin-bottom: $spacing-m;
+  margin-left: $spacing-xs;
+  padding-left: .8em;
+  li {
+    margin-bottom: 0;
+    padding-left: .1em;
+    color: inherit;    
+  }
+  ul,ol {
+    margin-bottom:0;
+  }
+}
+.entry-content ul > li,
+.comment-entry ul > li {
+  list-style-type: disc;
+}
+
+.entry-content ol > li,
+.comment-entry ol > li {
+  list-style-type: decimal;
+}

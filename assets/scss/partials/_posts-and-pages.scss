@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+14. Post & Pages
+--------------------------------------------------------------*/
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page-header {
+	background: #f5f5f5;
+	padding: 80px $spacing-s 32px;
+	line-height: 1em;
+	text-align: center;
+
+	@include media($medium-screen) {
+		padding: $spacing-s $spacing-s 32px;
+	}
+	
+	h1 {
+		font-size: .6em;
+		text-transform: uppercase;
+		border: 1px solid;
+		border-color: transparentize($base-font-color, .2);
+		padding: .4em .8em;
+		display: inline;
+		letter-spacing: .2em;
+		font-family: $base-font-family;
+		font-weight: 300;
+		color: $base-font-color;
+		width: 30%;
+	}
+
+}
+
+/* Intro image on single pages */
+
+.intro-image {
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.intro-image__inside {
+  z-index: $z-content;
+  position: relative;
+}
+
+.intro-image .entry-header {
+  margin: 0; 
+  padding: $spacing-l 0; 
+}
+
+.taxonomy-description {
+	@include outer-container(570px);
+	font-size: .8em;
+	padding: $spacing-s 0 0;
+	p {
+		margin: 0;
+	}	
+}

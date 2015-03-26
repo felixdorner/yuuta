@@ -1,0 +1,331 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Yuuta\n"
+"POT-Creation-Date: 2015-03-26 16:25+0100\n"
+"PO-Revision-Date: 2015-03-26 16:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:4
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:23
+msgid "Name"
+msgstr ""
+
+#: comments.php:26
+msgid "Email (hidden)"
+msgstr ""
+
+#: comments.php:31
+msgid "Type your comment here..."
+msgstr ""
+
+#: comments.php:33
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Log out?</a>"
+msgstr ""
+
+#: comments.php:38
+msgid "Post comment"
+msgstr ""
+
+#: comments.php:70
+msgid "Apologies, for this post the comments are closed."
+msgstr ""
+
+#: content-aside.php:21 content-audio.php:21 content-chat.php:22
+#: content-gallery.php:22 content-image.php:21 content-link.php:22
+#: content-quote.php:22 content-single.php:20 content-video.php:21
+#: content.php:22
+msgid "Featured"
+msgstr ""
+
+#: content-aside.php:30 content-audio.php:30 content-chat.php:36
+#: content-gallery.php:37 content-image.php:30 content-single.php:41
+#: content-video.php:30 content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: content-aside.php:42 content-audio.php:42 content-chat.php:48
+#: content-gallery.php:49 content-image.php:42 content-link.php:42
+#: content-quote.php:39 content-video.php:42 content.php:48
+msgid "Read More &"
+msgstr ""
+
+#: content-aside.php:48 content-audio.php:48 content-chat.php:54
+#: content-gallery.php:55 content-image.php:48 content-link.php:48
+#: content-quote.php:45 content-video.php:48 content.php:54
+msgid "Comments closed"
+msgstr ""
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: footer.php:34
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:34
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:35
+#, php-format
+msgid "Theme: %1$s by %2$s"
+msgstr ""
+
+#: functions.php:71
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:113
+msgid "Footer"
+msgstr ""
+
+#: functions.php:200
+msgid "(Your comment is awaiting moderation.)"
+msgstr ""
+
+#: functions.php:204 inc/template-tags.php:126
+msgid "Edit"
+msgstr ""
+
+#: functions.php:210
+msgid "Reply"
+msgstr ""
+
+#: header.php:30
+msgid "Skip to content"
+msgstr ""
+
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:108
+msgid " "
+msgstr ""
+
+#: inc/template-tags.php:110 inc/template-tags.php:116
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/template-tags.php:114
+msgid " #"
+msgstr ""
+
+#: inc/template-tags.php:143
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: inc/template-tags.php:145
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:147
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/template-tags.php:149
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/template-tags.php:149
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:151
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:151
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:153
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:153
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:156
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:158
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:160
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:162
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:164
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:166
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:168
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:170
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:172
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/template-tags.php:175
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/template-tags.php:179
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:181
+msgid "Archives"
+msgstr ""
+
+#: inc/template-tags.php:275
+msgctxt "yuuta"
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+
+#: inc/template-tags.php:276
+msgid "Password:"
+msgstr ""
+
+#: inc/template-tags.php:276
+msgid "Submit"
+msgstr ""
+
+#: page-archive.php:45
+msgid "Yearly"
+msgstr ""
+
+#: page-archive.php:48
+msgid "Monthly"
+msgstr ""
+
+#: page-archive.php:51
+msgid "Authors"
+msgstr ""
+
+#: page-archive.php:54
+msgid "Categories"
+msgstr ""
+
+#: page-archive.php:57
+msgid "Tags"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""

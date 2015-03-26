@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+20. Widgets
+--------------------------------------------------------------*/
+
+.widget {
+	color: transparentize(black, 0);
+	margin-bottom: $spacing-s;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+/* Recent posts widget */
+.widget_recent_entries {
+	
+	li {
+		margin: 0 0 $spacing-xs;
+	}
+
+	li:last-child {
+		margin: 0;
+	}
+
+	.post-date {
+		display: block;
+	}
+}
+
+/* Calendar */
+.widget_calendar th,
+.widget_calendar td {
+	border-color: transparentize(white, 0.9);
+}
+
+/* Search Widget */
+.widget_search input {
+	font-size: .8em;
+
+	@include placeholder {		
+    color: transparentize(white, 0.7);
+  }
+}

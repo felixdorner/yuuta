@@ -1,0 +1,136 @@
+/** 19.1 Comments */
+
+.comments-nopassword {	
+	color: $comment-font-color;
+	border-bottom: 1px solid;
+	border-color: transparentize($comment-font-color, .8);
+	text-align: center;
+	margin: 0;
+}
+
+.commentwrap, .comments-nopassword {
+	background: $comment-bg-color;
+	display: table;
+  width: 100%;
+}
+
+#comments-open-anchor { position:absolute; margin-top:-50px; }
+
+.comments-wrapper {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 $spacing-xs;
+	font-size: .8em;
+	@include media($medium-screen) {
+		font-size: 1em;
+		padding: 0 $spacing-s;
+	}
+}
+
+.commentlist {
+	padding: $spacing-m 0 0;
+}
+
+.commentlist li {
+	margin: 0 0 $spacing-m;
+	list-style: none;
+	position: relative;	
+}
+
+.commentlist .children li {
+	padding: 0;
+	margin-top: $spacing-m;
+	
+	@include media($medium-screen) {
+		padding: 0 0 0 $spacing-l;
+	}
+
+}
+
+.comment-avatar{
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+
+	@include media($medium-screen) {
+  	float: left;
+  }
+}
+
+.comment-avatar img {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto $spacing-xs;
+	float: none;
+	border-radius: 30px;
+
+	@include media($medium-screen) {
+  	float: left;
+  	margin: 0 $spacing-s 0 0;
+  }
+}
+
+.comment-author, .comment-time {
+	text-transform: uppercase;	
+	font-size: .8em;
+	display: block;
+}
+
+.comment-author {
+	font-family: $alt-font-family;
+	font-weight: 700;
+	color: $comment-font-color;
+}
+
+.comment-time {
+	padding-top: 2px;	
+	color: $comment-font-color;
+}
+
+.comment-container {
+	overflow: hidden;	
+	min-height: 60px;
+}
+
+.comment-entry {
+	font-size: 1.2em;	
+	color: $comment-font-color;
+	margin: $spacing-xs 0 5px 0;
+	display: block;
+	clear: both;
+}
+
+/* comment reply button */
+.commentlist .comment-reply-link {
+	text-transform: uppercase;
+	font-size: .6em;
+
+	color: $comment-font-color;
+	
+	float:left;
+	margin:20px 0 0 0;
+	
+	@extend %btn-outlined-rounded;
+
+	@include transition(all 0.2s linear);
+
+	&:hover {
+		color: transparentize($comment-font-color, .4);
+	}
+}
+
+/* comment pagenav */
+.commentwrap .pagenav {
+	margin: 10px 0;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.commentwrap .pagenav.top {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}

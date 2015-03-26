@@ -1,0 +1,103 @@
+/*--------------------------------------------------------------
+04. Layout
+--------------------------------------------------------------*/
+
+.site {
+	@include outer-container(100%);
+}
+
+.site-content {
+  margin-top: 80px; // height of the navbar 
+}
+
+.hentry {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover; 
+}
+
+.home .hentry,
+.search .hentry,
+.archive .hentry {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+
+.home .hentry.has-post-thumbnail,
+.search .hentry.has-post-thumbnail,
+.archive .hentry.has-post-thumbnail {
+  border: none;
+}
+
+.hentry__inside {
+  @include transform(scale(1));
+  @include transition(all 0.4s ease-in-out);
+  position: relative;
+  z-index: 2;
+}
+
+.hentry__inside.active {
+  opacity: 0;
+  @include transform(scale(0));
+}
+
+.hentry__inside,
+.intro-image__inside,
+.page-content {
+	max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;	
+}
+
+.hentry__inside {
+  padding: $spacing-m $spacing-xs;
+  
+  @include media($medium-screen) {
+    padding: $spacing-xl $spacing-s;
+  }
+
+}
+
+.intro-image__inside,
+.page-content {
+  padding: $spacing-m $spacing-xs;
+
+  @include media($medium-screen) {
+    padding: $spacing-l $spacing-s;
+  }  
+}
+
+.hentry.single-template .hentry__inside {
+  padding: $spacing-s $spacing-xs;
+
+  @include media($medium-screen) {
+    padding: $spacing-m $spacing-s;
+  } 
+}
+
+.site-footer {
+	@include span-columns(12);
+}
+
+.footer-links {
+	max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+}
+
+aside {
+	@include span-columns(12 of 12);
+
+  // @include media($medium-screen) {
+  //   @include span-columns(6 of 12);
+  //   @include omega(2n);
+  //   @include clearfix;
+  // }
+
+  @include media($large-screen) {
+    @include span-columns(3 of 12);
+    @include omega(4n);
+    @include clearfix;
+  }
+}

@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------
+21. Footer
+--------------------------------------------------------------*/
+
+$footer-background: $light-gray;
+$footer-color: black;
+$footer-link-color: transparentize(black, 0.4);
+$footer-disclaimer-color: transparentize(black, 0);
+
+.site-footer {
+  background: $footer-background;
+  padding: $spacing-m $spacing-s;
+
+  hr {
+    border-color: transparentize($footer-color, 0.9);
+    margin: 0 auto;
+    width: 6em;
+    opacity: 1;
+  }
+
+  p {
+    color: $footer-disclaimer-color; 
+    margin: 1em auto;
+    max-width: 30em;
+    text-align: center;
+    font-size: .6em;
+    letter-spacing: .1em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $footer-link-color;
+  }
+
+  @include media($large-screen) {
+    padding: $spacing-m 0;
+  }
+
+  .colophon a {
+    color: $footer-link-color;    
+    &:hover {
+      opacity: .4;
+    }
+  }
+}
+
+.footer-branding {
+  margin-bottom: $spacing-s;
+  text-align: center;
+  color: $footer-disclaimer-color;
+
+  img {
+    max-height: 2em;
+    width: auto;
+  }
+
+  .site-title {
+    font-size: 1.6em;    
+  }
+
+  @include clearfix;
+} 
+
+.footer-links {    
+  padding: $spacing-xs 0;
+  text-align: center;
+  //text-transform: uppercase;
+  //letter-spacing: .2em;
+  font-size: .8em;
+
+  a {
+    color: $footer-link-color;
+    text-align: center;    
+    width: 100%;
+    &:hover {
+      color: transparentize(black, 0);
+    }
+  }
+
+  .widget-title {
+    color: $footer-color;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+}
+
+.social-links i {
+  display: inline-block;  
+  margin: $spacing-xs .4em 0;
+  font-size: 1.4em;
+}

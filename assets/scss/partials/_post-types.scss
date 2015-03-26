@@ -1,0 +1,200 @@
+/*--------------------------------------------------------------
+16. Post Types
+--------------------------------------------------------------*/
+
+/** Entry Headers */
+
+.format-quote .entry-header:before,
+.format-link .entry-header:before,
+//.format-video .entry-header:before,
+.format-chat .entry-header:before,
+//.format-aside .entry-header:before,
+//.format-image .entry-header:before,
+.format-gallery .entry-header:before,
+//.format-audio .entry-header:before 
+{
+  width: 100%;
+  @include row();
+  font-family: "ElegantIcons";    
+  font-weight: 300;
+  text-align: center;
+}
+
+.format-link .entry-header:before { 
+  font-size: 2em;
+  line-height: 2em;
+  content: "\e02b";
+
+  @include media($medium-screen) {
+    font-size: 3em; 
+  }
+
+}
+
+.format-quote .entry-header:before { 
+  font-size: 3em; 
+  line-height: 1em; 
+  content: "\7b";
+
+  @include media($medium-screen) {
+    font-size: 5em; 
+  }
+
+}
+
+// .format-video .entry-header:before {
+//   line-height: 2em; 
+//   content: "\e024";
+// }
+
+.format-chat .entry-header:before { 
+  font-size: 2em; 
+  line-height: 2em; 
+  content: "\077";
+
+  @include media($medium-screen) {
+    font-size: 3em; 
+  }
+}
+
+// .format-aside .entry-header:before {
+//   line-height: 2em; 
+//   content: "\068";
+// }
+
+// .format-image .entry-header:before { 
+//   line-height: 2em; 
+//   content: "\e005";
+// }
+
+.format-gallery .entry-header:before { 
+  line-height: 2em; 
+  content: "\e006";
+}
+
+// .format-audio .entry-header:before {   
+//   line-height: 2em; 
+//   content: "\e027";
+// }
+
+//.format-gallery .entry-header:before,
+//.format-image .entry-header:before,
+//.format-aside .entry-header:before,
+//.format-video .entry-header:before,
+//.format-audio .entry-header:before, 
+.format-gallery .entry-header:before {
+  font-size: 1.8em; 
+
+  @include media($medium-screen) {
+    font-size: 2.4em; 
+  }
+
+}
+
+/** Entry Titles */
+
+.format-quote .entry-title,
+.format-link .entry-title {
+  text-align: center;  
+  font-size: 1.2em;
+  text-transform: none;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  @include media($medium-screen) {
+    font-size: 2em;
+  }
+
+}
+
+.format-link header a { 
+  text-decoration: underline;
+}
+
+.format-link .posted-on a,
+.format-link .byline a {
+  text-decoration: none;
+}
+
+.format-aside .entry-content {
+  font-family: $alt-font-family;
+  //font-style: italic;
+}
+
+.format-chat .entry-content {
+  font-family: $pre-font-family;
+}
+
+.post-password-form {
+  background: rgba(0,0,0,.8);
+  color: white;
+  padding: $spacing-s;
+  label {
+    margin-top: $spacing-xs;
+    font-size: .6em;
+  }
+
+  input[type="password"] {
+    margin-bottom: $spacing-s;
+  }
+}
+
+.entry-content input[type="submit"],
+.page-content input[type="submit"] {  
+  font-size: .8em;
+  text-transform: uppercase;
+  @extend %btn-outlined-rounded;
+  @include transition(all 0.2s linear);
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.no-results,
+.not-found {
+  background: $comment-bg-color;
+  .page-content {
+  color: white;
+  input[type="search"] {
+    margin-bottom: $spacing-s;
+  }
+  }
+}
+
+/** Entry Content */
+
+.format-aside.has-post-thumbnail .entry-content,
+.format-chat.has-post-thumbnail .entry-content,
+.format-quote.has-post-thumbnail .entry-content,
+.format-link.has-post-thumbnail .entry-content,
+.format-video.has-post-thumbnail .entry-content,
+.format-image.has-post-thumbnail .entry-content,
+.format-audio.has-post-thumbnail .entry-content,
+.format-aside.has-post-thumbnail .entry-footer,
+.format-chat.has-post-thumbnail .entry-footer,
+.format-quote.has-post-thumbnail .entry-footer,
+.format-link.has-post-thumbnail .entry-footer,
+.format-video.has-post-thumbnail .entry-footer,
+.format-image.has-post-thumbnail .entry-footer,
+.format-audio.has-post-thumbnail .entry-footer {
+  color: white;
+}
+
+.format-quote blockquote {
+  font-size: $h2-font-size;
+  margin: 0;
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.format-image.has-post-thumbnail .wp-caption-text {
+  color: white;
+}

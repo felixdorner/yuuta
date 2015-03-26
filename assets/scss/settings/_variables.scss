@@ -1,0 +1,115 @@
+//
+//
+// TYPO
+//
+//
+
+// Fonts
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
+$alt-font-family: "Roboto Slab", Times, Georgia, serif;
+$pre-font-family: "Courier 10 Pitch", Courier, monospace;
+$code-font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+
+// Font Sizes
+$base-font-size: 18px;
+$small-font-size: .8em;
+$h1-font-size: $base-font-size * 3.25;
+$h2-font-size: $base-font-size * 2.75;
+$h3-font-size: $base-font-size * 2.25;
+$h4-font-size: $base-font-size * 1.75;
+$h5-font-size: $base-font-size * 1.5;
+$h6-font-size: $base-font-size * 1.25;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+
+//
+//
+// COLORS
+//
+//
+
+// Shades of gray
+$light-gray: #F0F0F0;
+$medium-gray: darken($light-gray, 40);
+$gray: darken($light-gray, 70);
+$dark-gray: darken($light-gray, 90);
+
+// Background Color
+$base-bg-color: white;
+$ins-bg-color: $gray;
+$pre-bg-color: darken($gray, 10);
+
+// Font Colors
+$base-font-color: black;
+$base-accent-color: black;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Button Colors
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+
+//
+//
+// SPACINGS
+//
+//
+
+$base-spacing: $base-line-height * 1em;
+$spacing-xs: 15px;
+$spacing-s: 30px;
+$spacing-m: 60px;
+$spacing-l: 90px;
+$spacing-xl: 120px;
+$spacing-xxl: 150px;
+
+
+//
+//
+// Z-INDEX
+//
+//
+
+$z-below-content: 1;
+$z-content: 2;
+$z-above-content: 3;
+$z-above-all: 99999;
+
+
+//
+//
+// BORDERS
+//
+//
+
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+$base-border-radius: 2px;
+
+
+//
+//
+// FORMS
+//
+//
+
+// Standard
+$form-border-color: transparentize(white, 0.6);
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Comments
+$comment-bg-color: $light-gray;
+$comment-font-color: black;
+$respond-bg-color: #fff;

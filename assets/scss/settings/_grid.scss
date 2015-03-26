@@ -1,0 +1,18 @@
+@import "../../../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// Neat Overrides
+$column: 80px;
+$gutter: 40px;
+$grid-columns: 12;
+$max-width: 100%;
+
+//$visual-grid: true;
+
+// Neat Breakpoints
+$small-screen: em(480);
+$medium-screen: em(640);
+$large-screen: em(860);
+
+// New Breakpoints
+//$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+//$large-screen-up: new-breakpoint(min-width $large-screen 8);

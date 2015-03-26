@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+22. Jetpack
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+#infinite-handle {
+	text-align: center;
+	background: #f5f5f5;	
+	border-bottom: 1px solid #eee;
+
+	span {
+		@include transition(all 0.2s linear);
+		display: inline-block;
+		margin: 0 auto;
+		background: none;
+		color: transparentize(black, .4);
+		font-size: .6em;		
+		line-height: 1em;		
+		padding: $spacing-s;
+		button {
+			text-transform: uppercase;
+			letter-spacing: .2em;
+		}
+	}
+
+	span:hover {
+		color: black;
+	}
+
+}
+
+.contact-form textarea {
+	width: 100% !important;
+}

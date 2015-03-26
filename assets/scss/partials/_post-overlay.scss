@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+17. Post Overlay
+--------------------------------------------------------------*/
+
+.overlay {
+	@include transition(all 0.4s linear);
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+.has-post-thumbnail .overlay.light-dark {
+	background: #000;
+	opacity: .1;
+}
+
+.has-post-thumbnail .overlay.active {
+	background: transparent;
+	opacity: 0;
+}

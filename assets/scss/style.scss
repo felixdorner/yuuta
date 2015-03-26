@@ -1,0 +1,87 @@
+/*
+Theme Name: Yuuta
+Version: 1.0
+Author: Felix Dorner
+Author URI: http://felixdorner.com/
+Theme URI: http://demo.felixdorner.com/yuuta
+Description: Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
+License: GNU GENERAL PUBLIC LICENSE, Version 2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yuuta
+Tags: black, white, light, fluid-layout, responsive-layout, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, threaded-comments, translation-ready, photoblogging
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 01.0 - Normalize
+ * 02.0 - Elements
+ * 03.0 - Typography
+ * 04.0 - Layout
+ * 05.0 - Forms
+ * 06.0 - Tables
+ * 07.0 - Lists
+ * 08.0 - Buttons
+ * 09.0 - Accessibility
+ * 10.0 - Media
+ * 11.0 - Pre-Loader
+ * 12.0 - Header
+ * 13.0 - Navigation
+ * 14.0 - Post & Pages
+ * 15.0 - Post Basics
+ * 16.0 - Post Types
+ * 17.0 - Post Overlay
+ * 18.0 - Pagination
+ * 19.0 - Comments
+ * 		19.1 - Comments
+ *		19.2 - Comment Form
+ * 20.0 - Widgets
+ * 21.0 - Footer
+ * 22.0 - Jetpack Compatibility
+ */
+
+/*--------------------------------------------------------------
+01. Normalize
+--------------------------------------------------------------*/
+@import "base/normalize";
+
+// Bourbon - http://bourbon.io
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+// Settings
+@import "settings/variables";
+@import "settings/grid"; // Must be imported before Neat
+@import "settings/mixins";
+
+// Neat - http://neat.bourbon.io
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+
+// Basics
+@import "base/elements";
+@import "base/typography";
+//@import "base/helpers";
+@import "base/layout";
+
+// Components
+@import "components/forms";
+@import "components/tables";
+@import "components/lists";
+@import "components/buttons/inc";
+@import "components/accessibility";
+@import "components/media";
+
+// Partials
+@import "partials/preloader";
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/posts-and-pages";
+@import "partials/post-standard";
+@import "partials/post-types";
+@import "partials/post-overlay";
+@import "partials/pagination";
+@import "partials/comments/inc";
+@import "partials/widgets";
+@import "partials/footer";
+
+// Plugins
+@import "plugins/jetpack";

@@ -1,0 +1,59 @@
+/** 08.1 Button Extends */
+
+%btn-outlined-rounded {
+  background: transparent;
+  padding: .8em 1.4em;
+  border: 1px solid;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+}
+
+%button {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-button-color;
+  border: 1px solid $base-button-color;
+  border-radius: $base-border-radius;
+  color: white;
+  display: inline-block;
+  font-size: $base-font-size;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  @include transition(all 0.2s ease-in-out);
+
+  &:hover {
+    background-color: $hover-button-color;
+    color: white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+%button-outlined {
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  border: 1px solid $base-button-color;
+  border-radius: $base-border-radius;
+  color: $base-button-color;
+  display: inline-block;
+  font-size: $base-font-size;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  @include transition(all 0.2s ease-in-out);
+
+  &:hover, &.is-active {
+    background-color: $base-button-color;
+    color: white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

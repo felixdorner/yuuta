@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+03. Typograhpy
+--------------------------------------------------------------*/
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+}
+
+p {
+  margin: 0 0 1.6em;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #f5f5f5;
+  font-family: $pre-font-family;
+  font-size: .8em;
+  line-height: $base-line-height;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+.home .has-post-thumbnail pre,
+.archive .has-post-thumbnail pre,
+.search .has-post-thumbnail pre {
+  background: transparentize($pre-bg-color, .2);
+  color: white;
+}
+
+.comment-entry pre {
+  background: rgba(255,255,255, 1);
+}
+
+code, kbd, tt, var {
+  font-family: $code-font-family;
+  font-size: .8em;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+mark, ins {
+  background: $ins-bg-color;
+  color: white;
+  text-decoration: none;
+}
+
+.comment-entry mark, 
+.comment-entry ins {
+  background: $ins-bg-color;
+}
+
+small {
+  font-size: .8em;
+}
+
+big {
+  font-size: 1.4em;
+}
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote, q {
+  font-family: $alt-font-family;
+  line-height: $header-line-height;
+  margin: 0 0 .6em;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  clear: both;
+  font-weight: 700;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+
+h1 {
+  font-size: $h1-font-size * 0.7;
+}
+
+h2 {
+  font-size: $h2-font-size * 0.7;
+}
+
+h3 {
+  font-size: $h3-font-size * 0.7;
+}
+
+h4 {
+  font-size: $h4-font-size * 0.7;
+}
+
+h5 {
+  font-size: $h5-font-size * 0.7;
+}
+
+h6 {
+  font-size: $h6-font-size * 0.7;
+}
+
+@include media($medium-screen) {
+  h1 {
+  font-size: $h1-font-size;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+  }
+
+  h3 {
+    font-size: $h3-font-size;
+  }
+
+  h4 {
+    font-size: $h4-font-size;
+  }
+
+  h5 {
+    font-size: $h5-font-size;
+  }
+
+  h6 {
+    font-size: $h6-font-size;
+  }
+}
+
+blockquote, q {
+  font-size: $h3-font-size;
+  
+  @include media($medium-screen) { 
+    font-size: $h4-font-size * 0.8;
+    padding-left: $spacing-s;
+  }
+
+}

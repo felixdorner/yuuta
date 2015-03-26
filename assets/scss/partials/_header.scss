@@ -1,0 +1,271 @@
+/*--------------------------------------------------------------
+12. Header
+--------------------------------------------------------------*/
+
+//header height
+$header-height-S: 50px;
+$header-height-M: 80px;
+
+// z-index 
+$content-zindex: 1;
+$nav-zindex: 3;
+$header-zindex: 4;
+
+/* If WordPress admin bar is enabled */
+.admin-bar .site-header {
+	top: 32px;
+}
+
+.admin-bar .site-header.is-fixed {
+	top: -52px;
+}
+
+.site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $header-height-M;	
+	z-index: $header-zindex;
+	border-bottom: 1px solid #eee;
+
+	@include media($medium-screen) {
+		
+		@include transition(background-color .3s);
+
+		/* Force Hardware Acceleration in WebKit */
+		@include transform(translate3d(0,0,0));
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		&.is-fixed {
+			/* when the user scrolls down, we hide the header right above the viewport */
+			position: fixed;
+			top: -$header-height-M;
+			background-color: rgba(white, .8);
+			-webkit-transition: -webkit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			transition: transform 0.3s;
+		}
+
+		&.is-visible {
+			/* if the user changes the scrolling direction, we show the header */
+			@include transform(translate3d(0,100%,0));
+		}
+
+		&.menu-is-open {
+			/* add a background color to the header when the navigation is open */
+			background-color: rgba(black, 0);			
+		}
+
+	}
+}
+
+.site-branding {
+	display: block;
+	position: absolute;
+	@include center(y);
+	left: .875em;
+
+	img {
+		display: block;
+		max-height: 30px;
+		width: auto;
+	}
+
+	@include media($medium-screen) {
+		left: 1.6em;
+	}
+}
+
+/** Branding */
+
+.site-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  margin: 0;
+
+  a {
+    color: black;
+  }
+
+}
+
+.site-description {  
+	font-family: $base-font-family;
+  font-size: .6em;
+  letter-spacing: .1em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+header.site-description {
+	display: inline-block;
+}
+
+/** Menu-Icons */
+
+.search-trigger {
+	position: absolute;	
+	right: 40px;
+	top: 28px;
+	width: 40px;
+	//color: white;
+	text-align: center;
+
+	@include media($medium-screen) {
+		right: $spacing-m;
+	}
+
+	&:before {
+		width: 100%;
+    @include row();
+
+    font-family: "ElegantIcons";    
+    font-weight: normal;
+    text-align: center;
+
+    content: "\55";
+	}
+
+	&.search-form--active:before {
+		font-size: 1.6em;
+		line-height: .9em;
+		content: "\4d";
+	}
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.site-header .search-form {
+	position: absolute;
+	right: 60px;
+	top: 0;
+	width: 80px;
+	opacity: 0;	
+	display: none;
+
+	@include media($medium-screen) {
+		right: 110px;		
+	}
+
+	@include media($large-screen) {
+		display: block;
+	}
+
+	input.search-field {
+		width: 80px;	
+		font-size: .8em;
+		@include border-width(0 0 0 0);
+		padding: .4em .4em .4em 0;
+
+		-webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0;		
+
+		&:active, &:focus, &:visited {
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		} 
+
+		@include placeholder {
+	    color: black;
+	  }
+	}
+
+	.search-submit {
+		display: none;
+	}
+
+	&.search-form--active {
+		@include transition(all 0.2s ease-out);
+		width: 80px;
+		display: block;
+		top: 28px;
+		opacity: 1;
+	}
+}
+
+.primary-nav-trigger {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+
+	.menu-icon {
+		/* this span is the central line of the menu icon */
+		display: inline-block;
+		position: absolute;
+		@include center;
+		width: 22px;
+		height: 4px;
+		background-color: black;
+		@include transition(background-color .3s);
+		
+		/* these are the upper and lower lines in the menu icon */
+		&::before, &:after {
+			content: '';
+			width: 100%;
+			height: 100%; 
+			position: absolute;
+			background-color: black;
+			right: 0;
+
+			-webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+			-moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+			transition: transform .3s, top .3s, background-color 0s;
+		}
+		
+		&::before {
+			top: -7px;
+		}
+
+		&::after {
+			top: 7px;
+		}
+
+		&.is-clicked {
+			background-color: rgba(black, 0);
+
+			&::before, &::after {
+				background-color: rgba(black, 1);
+			}
+
+			&::before {
+				top: 0;
+				@include transform(rotate(135deg));
+			}
+
+			&::after {
+				top: 0;
+				@include transform(rotate(225deg));
+			}
+		}
+	}
+
+	@include media($medium-screen) {
+		width: 50px;
+		padding-left: 1em;
+		background-color: transparent;
+		height: 30px;
+		line-height: 30px;
+		right: .8em;
+		@include center(y);
+
+		.cd-menu-text {
+			display: inline-block;
+		}
+
+		.menu-icon {
+			left: auto;
+			right: 1em;
+			@include transform(translateX(0) translateY(-50%));
+		}
+	}
+}

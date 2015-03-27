@@ -6,8 +6,8 @@
 .posts-navigation {
 	float: left;
 	width: 100%;
-	background: $light-gray;
-	border-bottom: 1px solid #e5e5e5;
+	background: $dark-gray;
+	border-bottom: 1px solid transparentize(white, 0.8);	
 	//@include outer-container;
 }
 
@@ -25,11 +25,11 @@
 		padding: $spacing-xs 10px;		
 
 		a {
-			color: transparentize(black, .4);
+			color: transparentize(white, .4);
 		}				
 
 		& a:hover {
-			color: #000;				
+			color: #fff;				
 		}
 
 		@include media($medium-screen) {

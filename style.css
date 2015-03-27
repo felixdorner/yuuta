@@ -1,6 +1,6 @@
 /*
 Theme Name: Yuuta
-Version: 1.0
+Version: 1.1
 Author: Felix Dorner
 Author URI: http://felixdorner.com/
 Theme URI: http://demo.felixdorner.com/yuuta
@@ -367,7 +367,7 @@ pre {
 }
 
 .comment-entry pre {
-  background: white;
+  background: #3d3d3d;
 }
 
 code, kbd, tt, var {
@@ -1098,29 +1098,6 @@ dl dd {
     width: 50%;
   }
 }
-/*--------------------------------------------------------------
-11. Pre-Loader
---------------------------------------------------------------*/
-#loader {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 20000;
-  padding-top: 250px;
-}
-
-#progress-bar {
-  height: 10px;
-  background-color: #0a0a0a;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  -moz-transition: all .5s;
-  width: 0px;
-}
-
 /*--------------------------------------------------------------
 12. Header
 --------------------------------------------------------------*/
@@ -2117,7 +2094,7 @@ figure.alignleft {
 
 .no-results,
 .not-found {
-  background: #F0F0F0;
+  background: #0a0a0a;
 }
 .no-results .page-content,
 .not-found .page-content {
@@ -2189,8 +2166,8 @@ figure.alignleft {
 .posts-navigation {
   float: left;
   width: 100%;
-  background: #F0F0F0;
-  border-bottom: 1px solid #e5e5e5;
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .post-navigation .nav-links,
@@ -2223,13 +2200,13 @@ figure.alignleft {
 .post-navigation .nav-links .nav-next a,
 .posts-navigation .nav-links .nav-previous a,
 .posts-navigation .nav-links .nav-next a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 .post-navigation .nav-links .nav-previous a:hover,
 .post-navigation .nav-links .nav-next a:hover,
 .posts-navigation .nav-links .nav-previous a:hover,
 .posts-navigation .nav-links .nav-next a:hover {
-  color: #000;
+  color: #fff;
 }
 @media screen and (min-width: 40em) {
   .post-navigation .nav-links .nav-previous,
@@ -2274,15 +2251,15 @@ figure.alignleft {
 --------------------------------------------------------------*/
 /** 19.1 Comments */
 .comments-nopassword {
-  color: black;
+  color: #989898;
   border-bottom: 1px solid;
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(152, 152, 152, 0.2);
   text-align: center;
   margin: 0;
 }
 
 .commentwrap, .comments-nopassword {
-  background: #F0F0F0;
+  background: #0a0a0a;
   display: table;
   width: 100%;
 }
@@ -2359,12 +2336,12 @@ figure.alignleft {
 .comment-author {
   font-family: "Roboto Slab", Times, Georgia, serif;
   font-weight: 700;
-  color: black;
+  color: #989898;
 }
 
 .comment-time {
   padding-top: 2px;
-  color: black;
+  color: #989898;
 }
 
 .comment-container {
@@ -2374,7 +2351,7 @@ figure.alignleft {
 
 .comment-entry {
   font-size: 1.2em;
-  color: black;
+  color: #989898;
   margin: 15px 0 5px 0;
   display: block;
   clear: both;
@@ -2384,7 +2361,7 @@ figure.alignleft {
 .commentlist .comment-reply-link {
   text-transform: uppercase;
   font-size: .6em;
-  color: black;
+  color: #989898;
   float: left;
   margin: 20px 0 0 0;
   -webkit-transition: all 0.2s linear;
@@ -2392,7 +2369,7 @@ figure.alignleft {
   transition: all 0.2s linear;
 }
 .commentlist .comment-reply-link:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(152, 152, 152, 0.6);
 }
 
 /* comment pagenav */
@@ -2418,7 +2395,7 @@ figure.alignleft {
   position: relative;
   clear: both;
   text-align: center;
-  background-color: #fff;
+  background-color: #1B1B1B;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2471,7 +2448,7 @@ figure.alignleft {
   background: none;
   font-size: 1em;
   line-height: 1em;
-  color: black;
+  color: #989898;
   resize: none;
 }
 
@@ -2510,12 +2487,12 @@ figure.alignleft {
   padding-left: 0;
   border-width: 0 0 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(152, 152, 152, 0.6);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   background: none;
-  color: black;
+  color: #989898;
   -webkit-transition: all 0.8s linear;
   -moz-transition: all 0.8s linear;
   transition: all 0.8s linear;
@@ -2523,12 +2500,12 @@ figure.alignleft {
 
 #author:hover, #email:hover, #author:focus, #email:focus {
   color: white;
-  border-color: black;
+  border-color: #989898;
 }
 
 #cancel-comment {
   display: none;
-  color: black;
+  color: #989898;
   font-size: 2em;
   position: absolute;
   left: 6px;
@@ -2537,7 +2514,7 @@ figure.alignleft {
   z-index: 4;
 }
 #cancel-comment:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(152, 152, 152, 0.6);
 }
 
 #respond #cancel-comment-reply-link {
@@ -2559,7 +2536,7 @@ figure.alignleft {
   font-size: .8em;
   text-align: center;
   text-transform: uppercase;
-  color: black;
+  color: #989898;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -2572,7 +2549,7 @@ figure.alignleft {
   transition: color 0.2s linear;
 }
 #respond #submit:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(152, 152, 152, 0.6);
 }
 
 .submit-active {
@@ -2620,7 +2597,7 @@ figure.alignleft {
 20. Widgets
 --------------------------------------------------------------*/
 .widget {
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 30px;
   /* Make sure select elements fit in widgets. */
 }
@@ -2671,17 +2648,17 @@ figure.alignleft {
 21. Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background: #F0F0F0;
+  background: #0a0a0a;
   padding: 60px 30px;
 }
 .site-footer hr {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
   margin: 0 auto;
   width: 6em;
   opacity: 1;
 }
 .site-footer p {
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
   margin: 1em auto;
   max-width: 30em;
   text-align: center;
@@ -2691,7 +2668,7 @@ figure.alignleft {
   text-transform: uppercase;
 }
 .site-footer a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 }
 @media screen and (min-width: 53.75em) {
   .site-footer {
@@ -2699,16 +2676,16 @@ figure.alignleft {
   }
 }
 .site-footer .colophon a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 }
 .site-footer .colophon a:hover {
-  color: black;
+  color: white;
 }
 
 .footer-branding {
   margin-bottom: 30px;
   text-align: center;
-  color: black;
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer-branding img {
   max-height: 2em;
@@ -2729,15 +2706,15 @@ figure.alignleft {
   font-size: .8em;
 }
 .footer-links a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
   width: 100%;
 }
 .footer-links a:hover {
-  color: black;
+  color: white;
 }
 .footer-links .widget-title {
-  color: black;
+  color: rgba(255, 255, 255, 0.4);
   font-size: 1.2em;
   margin-bottom: 1em;
   text-transform: uppercase;

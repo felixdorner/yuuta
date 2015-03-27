@@ -2,17 +2,17 @@
 21. Footer
 --------------------------------------------------------------*/
 
-$footer-background: $light-gray;
-$footer-color: black;
-$footer-link-color: transparentize(black, 0.4);
-$footer-disclaimer-color: transparentize(black, 0);
+$footer-background: $dark-gray;
+$footer-color: transparentize(white, 0.6);
+$footer-link-color: transparentize(white, 0.6);
+$footer-disclaimer-color: transparentize(white, 0.4);
 
 .site-footer {
   background: $footer-background;
   padding: $spacing-m $spacing-s;
 
   hr {
-    border-color: transparentize($footer-color, 0.9);
+    border-color: transparentize($footer-color, 0.2);
     margin: 0 auto;
     width: 6em;
     opacity: 1;
@@ -40,7 +40,7 @@ $footer-disclaimer-color: transparentize(black, 0);
   .colophon a {
     color: $footer-link-color;    
     &:hover {
-      color: black;
+      color: white;
     }
   }
 }
@@ -74,7 +74,7 @@ $footer-disclaimer-color: transparentize(black, 0);
     text-align: center;    
     width: 100%;
     &:hover {
-      color: transparentize(black, 0);
+      color: transparentize(white, 0);
     }
   }
 

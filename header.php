@@ -20,10 +20,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<div id="loader">
-		<div id="progress-bar"></div>
-	</div>
 	
 	<div id="page" class="hfeed site">
 		

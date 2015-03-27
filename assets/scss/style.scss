@@ -1,6 +1,6 @@
 /*
 Theme Name: Yuuta
-Version: 1.0
+Version: 1.1
 Author: Felix Dorner
 Author URI: http://felixdorner.com/
 Theme URI: http://demo.felixdorner.com/yuuta
@@ -71,7 +71,7 @@ Tags: black, white, light, fluid-layout, responsive-layout, custom-menu, editor-
 @import "components/media";
 
 // Partials
-@import "partials/preloader";
+//@import "partials/preloader";
 @import "partials/header";
 @import "partials/navigation";
 @import "partials/posts-and-pages";

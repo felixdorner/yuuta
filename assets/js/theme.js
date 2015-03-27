@@ -2,17 +2,6 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	/************** Loader **************/
-
-  var count = 1;
-
-  $('img').load(function () {
-     $('#progress-bar').css('width', count * 170);
-     count = count + 1;
-  });
-
-  $('#loader').css('padding-top', $(window).height() / 2);
-
 	/************** Navigation **************/
 
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
@@ -163,16 +152,5 @@ jQuery(document).ready(function($) {
 			}
 		}, false );
 	}
-
-});
-
-jQuery(window).load(function () {
-
-    "use strict";
-
-    // Remove loader
-
-    jQuery('#progress-bar').width('100%');
-    jQuery('#loader').hide();
 
 });

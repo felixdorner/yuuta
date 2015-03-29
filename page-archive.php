@@ -28,9 +28,9 @@ get_header(); ?>
 							<hr>
 						</header><!-- .entry-header -->
 					</div>	
-					<?php if ( get_field( 'background_overlay') ) { ?>
-						<div class="overlay <?php echo esc_attr(get_field( 'background_overlay')); ?> is-single"></div>
-					<?php } ?>
+					
+					<div class="overlay light-dark is-single"></div>
+					
 
 				</div>
 

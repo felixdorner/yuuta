@@ -29,6 +29,9 @@ Ping me on Twitter (@felixdorner) and I'll try to help you.
 
 == Change Log ==
 
+= 1.2 =
+* Fixed archives template
+
 = 1.1 =
 * Changed footer/pagination/comments color
 * Removed pre-loader

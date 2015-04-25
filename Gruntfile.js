@@ -60,7 +60,8 @@ module.exports = function(grunt) {
                 '!.gitignore', 
                 '!**/scss/**', 
                 '!Gruntfile.js', 
-                '!package.json'
+                '!package.json',
+                '!yuuta.zip'
             ], 
             dest: 'yuuta/'
           },

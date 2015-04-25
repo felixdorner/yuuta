@@ -1,11 +1,11 @@
 === Yuuta WordPress Theme ===
 Contributers: Felix Dorner
-Donate link: http://felixdorner.com
+Donate link: http://drnr.co
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, white, dark, light, fluid-layout, responsive-layout, custom-colors, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
 Requires at least: 3.8
-Tested up to: 4.1
+Tested up to: 4.2
 
 Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
 
@@ -28,6 +28,10 @@ Yuuta is a clean and free WordPress theme designed to serve as a visual diary. D
 Ping me on Twitter (@felixdorner) and I'll try to help you.
 
 == Change Log ==
+
+= 1.3 =
+* Better font loading
+* Added licenses for fonts
 
 = 1.2 =
 * Fixed archives template

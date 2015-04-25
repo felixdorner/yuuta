@@ -14,7 +14,7 @@ if ( ! isset( $content_width ) ) {
 
 /************************************************************/
 /*                                                          */
-/*   THEME SETUP
+/*   THEME SETUP                                            */
 /*                                                          */
 /************************************************************/
 
@@ -122,11 +122,55 @@ add_action( 'widgets_init', 'yuuta_widgets_init' );
 
 /************************************************************/
 /*                                                          */
-/*   SCRIPTS & STYLES                                        */
+/*   Fonts                                                  */
+/*                                                          */
+/************************************************************/
+
+function yuuta_fonts_url() {
+    $fonts_url = '';
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Lora, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto = _x( 'on', 'Roboto font: on or off', 'yuuta' );
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Open Sans, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'yuuta' );
+ 
+    if ( 'off' !== $roboto || 'off' !== $roboto_slab ) {
+        $font_families = array();
+ 
+        if ( 'off' !== $roboto ) {
+            $font_families[] = 'Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100';
+        }
+ 
+        if ( 'off' !== $roboto_slab ) {
+            $font_families[] = 'Roboto+Slab:400,100,300,700';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
+}
+
+/************************************************************/
+/*                                                          */
+/*   SCRIPTS & STYLES                                       */
 /*                                                          */
 /************************************************************/
 
 function yuuta_scripts() {
+	wp_enqueue_style( 'yuuta-fonts', yuuta_fonts_url(), array(), null );
 	wp_enqueue_style( 'yuuta-elegant-icons', get_template_directory_uri() . '/assets/fonts/elegant-icons/elegant-icons.min.css', array(), '1' );
 	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), '20150327' );	
 	wp_enqueue_script( 'yuuta-lightbox', get_template_directory_uri() . '/assets/js/imagelightbox.min.js', array('jquery'), '1', true );
@@ -139,16 +183,6 @@ function yuuta_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'yuuta_scripts' );
-
-/**
- * Implement Google Fonts
- */
-function yuuta_fonts() {
-	$protocol = is_ssl() ? 'https' : 'http';
-	wp_enqueue_style( 'yuuta-roboto', "$protocol://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css" );
-	wp_enqueue_style( 'yuuta-roboto-slab', "$protocol://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css" );
-}
-add_action( 'wp_enqueue_scripts', 'yuuta_fonts' );
 
 /************************************************************/
 /*                                                          */

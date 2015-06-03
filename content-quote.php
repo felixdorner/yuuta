@@ -42,7 +42,7 @@
 					<?php if ( have_comments() || comments_open() ) : ?>
 						<?php comments_number( 'Comment', 'View one comment', 'View % comments' ); ?>
 						<?php else : if ( ! comments_open() ) :?>
-							<?php _e( 'Comments closed', 'display' ); ?>
+							<?php _e( 'Comments closed', 'yuuta' ); ?>
 						<?php endif; // end ! comments_open() ?>
 					<?php endif; // end have_comments() || comments_open() ?>					
 			

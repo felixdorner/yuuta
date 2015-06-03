@@ -39,13 +39,13 @@
 				<a class="read-leave-comments" href="<?php the_permalink(); ?>">
 					
 					<?php if( strpos( get_the_content(), 'more-link' ) != false ) { ?>
-						<?php _e( 'Read More &', 'display' ); ?>
+						<?php _e( 'Read More &', 'yuuta' ); ?>
 					<?php } ?>					
 					
 					<?php if ( have_comments() || comments_open() ) : ?>
 						<?php comments_number( 'Comment', 'View one comment', 'View % comments' ); ?>
 						<?php else : if ( ! comments_open() ) :?>
-							<?php _e( 'Comments closed', 'display' ); ?>
+							<?php _e( 'Comments closed', 'yuuta' ); ?>
 						<?php endif; // end ! comments_open() ?>
 					<?php endif; // end have_comments() || comments_open() ?>					
 			

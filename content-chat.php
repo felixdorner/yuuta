@@ -49,7 +49,7 @@
 					<?php } ?>					
 					
 					<?php if ( have_comments() || comments_open() ) : ?>
-						<?php comments_number( 'Comment', 'View one comment', 'View % comments' ); ?>
+						<?php comments_number( __('Comment', 'yuuta'), __('View one comment', 'yuuta'), __('View % comments', 'yuuta') ); ?>
 						<?php else : if ( ! comments_open() ) :?>
 							<?php _e( 'Comments closed', 'yuuta' ); ?>
 						<?php endif; // end ! comments_open() ?>

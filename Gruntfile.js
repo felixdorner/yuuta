@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                     src : ['style.css', 'assets/js/*.js']
                 },
                 options: {
-                    proxy: "display.dev",
+                    proxy: "yuuta.dev",
                     watchTask: true,
                     notify: false
                 }

@@ -42,8 +42,4 @@
 /* Search Widget */
 .widget_search input {
 	font-size: .8em;
-
-	@include placeholder {		
-    color: black;
-  }
 }

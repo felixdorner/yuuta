@@ -1,6 +1,6 @@
 <?php
 /**
- * yuuta Theme Customizer
+ * Yuuta Theme Customizer
  *
  * @package yuuta
  */

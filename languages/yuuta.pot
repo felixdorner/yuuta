@@ -1,0 +1,447 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Yuuta\n"
+"POT-Creation-Date: 2015-10-06 15:58+0200\n"
+"PO-Revision-Date: 2015-10-06 15:57+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:4
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:23
+msgid "Name"
+msgstr ""
+
+#: comments.php:26
+msgid "Email (hidden)"
+msgstr ""
+
+#: comments.php:31
+msgid "Type your comment here..."
+msgstr ""
+
+#: comments.php:33
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Log out?</a>"
+msgstr ""
+
+#: comments.php:38
+msgid "Post comment"
+msgstr ""
+
+#: comments.php:70
+msgid "Apologies, for this post the comments are closed."
+msgstr ""
+
+#: footer.php:34
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:34
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:35
+#, php-format
+msgid "Theme: %1$s by %2$s"
+msgstr ""
+
+#: functions.php:69
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:109
+msgid "Footer"
+msgstr ""
+
+#: functions.php:130
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:135
+msgctxt "Roboto Slab font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:11
+msgid "Awesome! You've decided to use Yuuta as your theme."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:15
+msgid "About this Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:17
+msgid "Support & Customizations"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:18
+msgid ""
+"As this is a free theme, support is limited to the basics. You can find me "
+"helping out in the designated support forum. However, if you need more than "
+"basic help I can offer you extended customization services."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:19
+msgid "Support Forum"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:19
+msgid "Inquire Customization"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:20
+msgid "Can I Contribute?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:21
+msgid ""
+"Found a bug? Want to contribute a patch or create a new feature? GitHub is "
+"the place to go! Or would you like to translate Yuuta in to your language? "
+"Get involved at Transifex."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:22
+msgid "Yuuta at GitHub"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:22
+msgid "Yuuta at Transifex"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:23
+msgid "Are you enjoying yuuta?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:24
+#, php-format
+msgid ""
+"Why not leave a review on %sWordPress.org%s? I would really appreciate "
+"it! :-)"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/intro.php:33
+#, php-format
+msgid ""
+"Looking for more themes? Take a look at my collection. %sMore themes &rarr;%s"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:42
+#, php-format
+msgid "Thanks for choosing Yuuta! Visit the %swelcome screen%s to get started."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:43
+msgid "Get started with Yuuta"
+msgstr ""
+
+#: inc/comments.php:23
+msgid "(Your comment is awaiting moderation.)"
+msgstr ""
+
+#: inc/comments.php:27 inc/template-tags.php:165
+msgid "Edit"
+msgstr ""
+
+#: inc/comments.php:33
+msgid "Reply"
+msgstr ""
+
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:88
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:93
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:119
+msgid "Read More & "
+msgstr ""
+
+#: inc/template-tags.php:120 inc/template-tags.php:135
+msgid "Comment"
+msgstr ""
+
+#: inc/template-tags.php:120 inc/template-tags.php:135
+msgid "View one comment"
+msgstr ""
+
+#: inc/template-tags.php:120 inc/template-tags.php:135
+#, php-format
+msgid "View % comments"
+msgstr ""
+
+#: inc/template-tags.php:129
+msgid "Read More"
+msgstr ""
+
+#: inc/template-tags.php:153
+msgid " "
+msgstr ""
+
+#: inc/template-tags.php:155 inc/template-tags.php:161
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/template-tags.php:159
+msgid " #"
+msgstr ""
+
+#: inc/template-tags.php:183
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: inc/template-tags.php:185
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:187
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: inc/template-tags.php:189
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: inc/template-tags.php:189
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:191
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:191
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:193
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:193
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:196
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:198
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:200
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:202
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:204
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:206
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:208
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:210
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:212
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/template-tags.php:215
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/template-tags.php:219
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:221
+msgid "Archives"
+msgstr ""
+
+#: inc/template-tags.php:321
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+
+#: inc/template-tags.php:322
+msgid "Password:"
+msgstr ""
+
+#: inc/template-tags.php:322
+msgid "Submit"
+msgstr ""
+
+#: page-archive.php:43
+msgid "Yearly"
+msgstr ""
+
+#: page-archive.php:46
+msgid "Monthly"
+msgstr ""
+
+#: page-archive.php:49
+msgid "Authors"
+msgstr ""
+
+#: page-archive.php:52
+msgid "Categories"
+msgstr ""
+
+#: page-archive.php:55
+msgid "Tags"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-aside.php:21 template-parts/content-audio.php:21
+#: template-parts/content-chat.php:22 template-parts/content-gallery.php:22
+#: template-parts/content-image.php:21 template-parts/content-link.php:22
+#: template-parts/content-quote.php:22 template-parts/content-single.php:20
+#: template-parts/content-video.php:21 template-parts/content.php:22
+msgid "Featured"
+msgstr ""
+
+#: template-parts/content-aside.php:30 template-parts/content-audio.php:30
+#: template-parts/content-chat.php:36 template-parts/content-gallery.php:37
+#: template-parts/content-image.php:30 template-parts/content-single.php:41
+#: template-parts/content-video.php:30 template-parts/content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Yuuta"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://yuuta.felixdorner.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Yuuta is a clean and free WordPress theme designed to serve as a visual "
+"diary. Due to support of all post formats you can create a pretty "
+"diversified blog."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Felix Dorner"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://felixdorner.com/"
+msgstr ""

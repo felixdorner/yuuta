@@ -13,9 +13,9 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php	if ( has_post_format( array( 'image', 'quote', 'link', 'aside', 'chat', 'audio', 'video', 'gallery' ) ) ) :
-				get_template_part( 'content', get_post_format() );				
+				get_template_part( 'template-parts/content', get_post_format() );				
 			else :
-				get_template_part( 'content', 'single' );
+				get_template_part( 'template-parts/content', 'single' );
 			endif; ?>
 
 			<?php	the_post_navigation(); ?>

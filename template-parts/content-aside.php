@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php if( ! is_single() ) : global $more; $more = 0; endif; //enable more link ?>
+<?php if ( ! is_single() ) : global $more; $more = 0; endif; //enable more link ?>
 
 <?php if ( ( has_post_thumbnail() && ! post_password_required() ) ) : ?>
 	<?php $yuuka_article_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'yuuta_thumb_large' ); ?>
@@ -18,7 +18,7 @@
 		<?php if ( is_sticky() ) { ?>
 			<header class="entry-header">			
 				<span class="sticky-tag">
-					<?php echo __('Featured', 'yuuta'); ?>
+					<?php echo esc_html_e( 'Featured', 'yuuta' ); ?>
 				</span>			
 			</header>
 		<?php } ?>
@@ -36,34 +36,20 @@
 		<footer class="entry-footer">
 			
 			<?php if( ! is_single() && ! is_page() ) { ?>
-				<a class="read-leave-comments" href="<?php the_permalink(); ?>">
-					
-					<?php if( strpos( get_the_content(), 'more-link' ) != false ) { ?>
-						<?php _e( 'Read More &', 'yuuta' ); ?>
-					<?php } ?>					
-					
-					<?php if ( have_comments() || comments_open() ) : ?>
-						<?php comments_number( __('Comment', 'yuuta'), _e('View one comment', 'yuuta'), _e('View % comments', 'yuuta') ); ?>
-						<?php else : if ( ! comments_open() ) :?>
-							<?php _e( 'Comments closed', 'yuuta' ); ?>
-						<?php endif; // end ! comments_open() ?>
-					<?php endif; // end have_comments() || comments_open() ?>					
-			
-				</a>				
-			<?php } else { ?>
 
-				<?php if ( 'post' == get_post_type() ) : ?>
-					<div class="entry-meta">					
-						<?php yuuta_entry_footer(); ?>
-					</div><!-- .entry-meta -->
-				<?php endif; ?>
+				<?php yuuta_read_leave_comments(); ?>
+
+			<?php } else { ?>
+				
+				<div class="entry-meta">					
+					<?php yuuta_entry_footer(); ?>
+				</div><!-- .entry-meta -->				
 
 			<?php } ?>
 
 		</footer><!-- .entry-footer -->
 
 	</div>
-
 	
 	<div class="overlay light-dark"></div>	
 

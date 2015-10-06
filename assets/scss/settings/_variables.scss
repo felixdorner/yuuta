@@ -100,7 +100,7 @@ $base-border-radius: 2px;
 //
 
 // Standard
-$form-border-color: transparentize(black, 0.6);
+$form-border-color: transparentize(white, 0.6);
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;

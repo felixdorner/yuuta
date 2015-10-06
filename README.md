@@ -1,44 +1,26 @@
-=== Yuuta WordPress Theme ===
-Contributers: Felix Dorner
-Donate link: http://drnr.co
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, white, dark, light, fluid-layout, responsive-layout, custom-colors, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
-Requires at least: 3.8
-Tested up to: 4.2
+# Yuuta - A clean and free WordPress theme designed to serve as a visual diary
 
-Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
+![Yuuta Screenshot](screenshot.png)
 
-== Description ==
+Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats the theme is capable of displaying a pretty diversified blog.
 
-Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
+## Support & Customizations
 
-== Installation ==
-1. Sign into your WordPress dashboard, go to Appearance > Themes, and click Add New.
-2. Click Upload.
-3. Click Choose File and select the theme zip file within the 'all-files'-package you downloaded.
-4. Click Install Now.
-5. After WordPress installs the theme, click Activate.
-6. You've successfully installed your new theme!
+As this is a free theme, support is limited to the basics. You can find me helping out in the designated [support forum](https://wordpress.org/support/theme/yuuta).
 
-== Frequently Asked Questions ==
+However, if you need more than basic help I can offer you [extended customization services](http//drnr.co).
 
-= I need more help! What should I do? =
+## Contributing to Yuuta
 
-Ping me on Twitter (@felixdorner) and I'll try to help you.
+**Found a bug? Please report the issue [here](https://github.com/felixdorner/yuuta/issues)!** Want to contribute a patch or create a new feature? Just send me a pull request and I will review it.
 
-== Change Log ==
+Would you like to translate Yuuta in to your language? Get involved at [Transifex](https://www.transifex.com/felix-dorner/yuuta/) and help to make this theme even more accessible.
 
-= 1.3 =
-* Better font loading
-* Added licenses for fonts
+## Author
 
-= 1.2 =
-* Fixed archives template
+**Felix Dorner**  
+*Berlin-based designer and web developer*
 
-= 1.1 =
-* Changed footer/pagination/comments color
-* Removed pre-loader
-
-= 1.0 =
-* Initial release
+- [Website](http://drnr.co)
+- [Twitter](https://twitter.com/felixdorner)
+- [Dribbble](https://www.dribbble.com/felixdorner)

@@ -2,7 +2,9 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	/************** Init Empty Text Area **************/
+	/*--------------------------------------------------------------
+	Init empty text area
+	--------------------------------------------------------------*/
 
 	function onBlur(el) {
     if (el.value == '') {
@@ -15,7 +17,9 @@ jQuery(document).ready(function($) {
 	    }
 	}
 
-	/************** Comment Form **************/
+	/*--------------------------------------------------------------
+	Comment form
+	--------------------------------------------------------------*/
 
 	$('#commentform-fields').hide(0);
 
@@ -55,7 +59,9 @@ jQuery(document).ready(function($) {
 		//$(window).scrollTo( '#comment-wrapper', 400, {offset:-70} );
 	});
 
-	/************** Expand Text Area **************/
+	/*--------------------------------------------------------------
+	Expand textarea
+	--------------------------------------------------------------*/
 
 	$( "textarea" ).autogrow();
 

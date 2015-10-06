@@ -15,9 +15,9 @@
 
 		<div class="intro-image__inside">
 			<header class="entry-header">
-				<?php if (is_sticky()) { ?>
+				<?php if ( is_sticky() ) { ?>
 				<span class="sticky-tag">
-					<?php echo __('Featured', 'yuuta'); ?>
+					<?php echo esc_html_e( 'Featured', 'yuuta' ); ?>
 				</span>
 				<?php } ?>			
 				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>

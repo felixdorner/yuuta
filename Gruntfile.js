@@ -2,76 +2,78 @@
 
 module.exports = function(grunt) {
 
-    // load all grunt tasks matching the `grunt-*` pattern
-    require('load-grunt-tasks')(grunt);
+  // load all grunt tasks matching the `grunt-*` pattern
+  require('load-grunt-tasks')(grunt);
 
-    grunt.initConfig({
+  grunt.initConfig({
 
-        // watch for changes and trigger sass, jshint and livereload
-        watch: {
-            sass: {
-                files: ['assets/scss/**/*.{scss,sass}'],
-                tasks: ['sass']
-            }
+    // watch for changes and trigger sass, jshint and livereload
+    watch: {
+      sass: {
+        files: ['assets/scss/**/*.{scss,sass}'],
+        tasks: ['sass']
+      }
+    },
+
+    // sass
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
         },
+        files: {
+          'style.css': 'assets/scss/style.scss'
+        }
+      }
+    },
 
-        // sass
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded',
-                    sourcemap: 'none'
-                },
-                files: {
-                    'style.css': 'assets/scss/style.scss'
-                }
-            }
+    // browserSync
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : ['style.css', 'assets/js/*.js']
         },
+        options: {
+          proxy: "yuuta.felixdorner.dev",
+          watchTask: true,
+          notify: false
+        }
+      }
+    },
 
-        // browserSync
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src : ['style.css', 'assets/js/*.js']
-                },
-                options: {
-                    proxy: "yuuta.dev",
-                    watchTask: true,
-                    notify: false
-                }
-            }
-        },
+    clean: {
+      build: ["yuuta"],          
+    },
 
-        clean: {
-          build: ["yuuta"],          
-        },
+    copy: {
+      build: {
+        expand: true, 
+        src: [
+          '**/*',
+          '!**/node_modules/**', 
+          '!**/bower_components/**', 
+          '!**/.sass-cache/**', 
+          '!**/.git/**', 
+          '!**/scss/**', 
+          '!Gruntfile.js', 
+          '!package.json', 
+          '!bower.json',          
+          '!.gitignore',
+          '!.DS_store',
+          '!yuuta.zip',
+          '!README.md',
+          '!changelog.md'
+        ], 
+        dest: 'yuuta/'
+      },
+    },
 
-        copy: {
-          build: {
-            expand: true, 
-            src: [
-                '**/*', 
-                '!**/node_modules/**', 
-                '!**/bower_components/**', 
-                '!bower.json', 
-                '!**/documentation/**', 
-                '!**/.sass-cache/**', 
-                '!**/.git/**', 
-                '!.gitignore', 
-                '!**/scss/**', 
-                '!Gruntfile.js', 
-                '!package.json',
-                '!yuuta.zip'
-            ], 
-            dest: 'yuuta/'
-          },
-        },
+  });
 
-    });
-
-    // register task
-    grunt.registerTask('default', ['sass']);
-    grunt.registerTask('serve', ['sass', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['sass', 'clean:build', 'copy:build']);
+  // register task
+  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('serve', ['sass', 'browserSync', 'watch']);
+  grunt.registerTask('build', ['sass', 'clean:build', 'copy:build']);
 
 };

@@ -64,9 +64,7 @@ $footer-disclaimer-color: transparentize(white, 0.4);
 
 .footer-links {    
   padding: $spacing-xs 0;
-  text-align: center;
-  //text-transform: uppercase;
-  //letter-spacing: .2em;
+  text-align: center;  
   font-size: .8em;
 
   a {
@@ -85,9 +83,3 @@ $footer-disclaimer-color: transparentize(white, 0.4);
     text-transform: uppercase;
   }
 }
-
-// .social-links i {
-//   display: inline-block;  
-//   margin: $spacing-xs .4em 0;
-//   font-size: 1.4em;
-// }

@@ -15,21 +15,15 @@
 
 	<div class="hentry__inside">
 
-		<header class="entry-header">
-			
-			<?php if ( is_sticky() ) { ?>
+		<?php if ( is_sticky() ) { ?>
+			<header class="entry-header">			
 				<span class="sticky-tag">
-					<?php echo __('Featured', 'yuuta'); ?>
-				</span>
-			<?php } ?>
-			
-			<?php yuuta_posted_on(); ?>		
-			
-			<hr>
+					<?php echo esc_html_e( 'Featured', 'yuuta' ); ?>
+				</span>			
+			</header>
+		<?php } ?>
 
-		</header><!-- .entry-header -->
-
-		<div class="entry-content">	
+		<div class="entry-content">
 			<?php the_content(''); ?>
 			<?php
 				wp_link_pages( array(
@@ -40,29 +34,16 @@
 		</div><!-- .entry-content -->	
 
 		<footer class="entry-footer">
-			
+
 			<?php if( ! is_single() && ! is_page() ) { ?>
-				<a class="read-leave-comments" href="<?php the_permalink(); ?>">
-					
-					<?php if( strpos( get_the_content(), 'more-link' ) != false ) { ?>
-						<?php _e( 'Read More &', 'yuuta' ); ?>
-					<?php } ?>					
-					
-					<?php if ( have_comments() || comments_open() ) : ?>
-						<?php comments_number( __('Comment', 'yuuta'), __('View one comment', 'yuuta'), __('View % comments', 'yuuta') ); ?>
-						<?php else : if ( ! comments_open() ) :?>
-							<?php _e( 'Comments closed', 'yuuta' ); ?>
-						<?php endif; // end ! comments_open() ?>
-					<?php endif; // end have_comments() || comments_open() ?>					
-			
-				</a>				
+
+				<?php yuuta_read_leave_comments(); ?>
+
 			<?php } else { ?>
 
-				<?php if ( 'post' == get_post_type() ) : ?>
-					<div class="entry-meta">					
-						<?php yuuta_entry_footer(); ?>
-					</div><!-- .entry-meta -->
-				<?php endif; ?>
+				<div class="entry-meta">
+					<?php yuuta_entry_footer(); ?>
+				</div><!-- .entry-meta -->
 
 			<?php } ?>
 

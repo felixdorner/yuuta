@@ -12,11 +12,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 860; /* pixels */
 }
 
-/************************************************************/
-/*                                                          */
-/*   THEME SETUP                                            */
-/*                                                          */
-/************************************************************/
+/*-----------------------------------------------------------------------------------*/
+/* Setup
+/*-----------------------------------------------------------------------------------*/
 
 if ( ! function_exists( 'yuuta_setup' ) ) :
 /**
@@ -97,11 +95,9 @@ function yuuta_setup() {
 endif; // yuuta_setup
 add_action( 'after_setup_theme', 'yuuta_setup' );
 
-/************************************************************/
-/*                                                          */
-/*   WIDGETS                                                */
-/*                                                          */
-/************************************************************/
+/*-----------------------------------------------------------------------------------*/
+/* Widgets
+/*-----------------------------------------------------------------------------------*/
 
 /**
  * Register widget area.
@@ -120,54 +116,39 @@ function yuuta_widgets_init() {
 }
 add_action( 'widgets_init', 'yuuta_widgets_init' );
 
-/************************************************************/
-/*                                                          */
-/*   Fonts                                                  */
-/*                                                          */
-/************************************************************/
+/*-----------------------------------------------------------------------------------*/
+/* Fonts
+/*-----------------------------------------------------------------------------------*/
 
 function yuuta_fonts_url() {
-    $fonts_url = '';
- 
-    /* Translators: If there are characters in your language that are not
-    * supported by Lora, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $roboto = _x( 'on', 'Roboto font: on or off', 'yuuta' );
- 
-    /* Translators: If there are characters in your language that are not
-    * supported by Open Sans, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'yuuta' );
- 
-    if ( 'off' !== $roboto || 'off' !== $roboto_slab ) {
-        $font_families = array();
- 
-        if ( 'off' !== $roboto ) {
-            $font_families[] = 'Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100';
-        }
- 
-        if ( 'off' !== $roboto_slab ) {
-            $font_families[] = 'Roboto+Slab:400,100,300,700';
-        }
- 
-        $query_args = array(
-            'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
-        );
- 
-        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-    }
- 
-    return $fonts_url;
+      
+  $fonts_url = '';
+  $fonts     = array();
+  $subsets   = 'latin,latin-ext';
+
+  /* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
+  if ( 'off' !== esc_html_x( 'on', 'Roboto font: on or off', 'yuuta' ) ) {
+    $fonts[] = 'Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100';
+  }
+
+  /* translators: If there are characters in your language that are not supported by Roboto Slab, translate this to 'off'. Do not translate into your own language. */
+  if ( 'off' !== esc_html_x( 'on', 'Roboto Slab font: on or off', 'yuuta' ) ) {
+    $fonts[] = 'Roboto+Slab:400,100,300,700';
+  }
+
+  if ( $fonts ) {
+    $fonts_url = add_query_arg( array(
+      'family' => urlencode( implode( '|', $fonts ) ),
+      'subset' => urlencode( $subsets ),
+    ), 'https://fonts.googleapis.com/css' );
+  }
+  return $fonts_url;
+
 }
 
-/************************************************************/
-/*                                                          */
-/*   SCRIPTS & STYLES                                       */
-/*                                                          */
-/************************************************************/
+/*-----------------------------------------------------------------------------------*/
+/* Scripts & Styles
+/*-----------------------------------------------------------------------------------*/
 
 function yuuta_scripts() {
 	wp_enqueue_style( 'yuuta-fonts', yuuta_fonts_url(), array(), null );
@@ -184,66 +165,20 @@ function yuuta_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'yuuta_scripts' );
 
-/************************************************************/
-/*                                                          */
-/*   INCLUDES                                               */
-/*                                                          */
-/************************************************************/
+/*-----------------------------------------------------------------------------------*/
+/* Includes
+/*-----------------------------------------------------------------------------------*/
 
-/**
- * Custom template tags for this theme.
- */
+require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
+require get_template_directory() . '/inc/comments.php';
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/plugins/jetpack.php';
 
 /**
- * Load Jetpack compatibility file.
+ * IMPORTANT NOTE:
+ * Do not add any custom code here. Please use a child theme so that your 
+ * customizations aren't lost after updates.
+ * http://codex.wordpress.org/Child_Themes
  */
-require get_template_directory() . '/inc/jetpack.php';
-
-/************************************************************/
-/*                                                          */
-/*   COMMENTS                                               */
-/*                                                          */
-/************************************************************/
-
-function custom_theme_comment($comment, $args, $depth) {
-	$GLOBALS['comment'] = $comment; 
-	?>
-
-	<li id="comment-<?php comment_ID() ?>" <?php comment_class(); ?>>
-
-	<div class="comment-avatar"><?php echo get_avatar($comment,$size='60'); ?></div>
-	<div class="comment-author"><?php comment_author(); ?></div>
-	<div class="comment-time"><?php comment_date('M d, Y'); ?></div>
-	<div class="clear"></div>
-
-	<div class="comment-container">
-		<div class="comment-entry">
-
-		<?php if ($comment->comment_approved == '0') : ?>
-			<strong><?php _e('(Your comment is awaiting moderation.)', 'yuuta') ?></strong>
-		<?php endif; ?>
-		
-		<?php echo comment_text(); ?>
-		<?php edit_comment_link( __('Edit', 'yuuta'),' [',']') ?>
-
-		</div>
-		
-		<div class="clear"></div>
-		
-		<?php comment_reply_link(array_merge( $args, array('add_below' => 'comment', 'depth' => $depth, 'reply_text' => __( 'Reply', 'yuuta' ), 'max_depth' => $args['max_depth']))) ?>
-	
-	</div>
-
-	<?php
-}

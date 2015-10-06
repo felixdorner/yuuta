@@ -2,7 +2,9 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	/************** Navigation **************/
+	/*--------------------------------------------------------------
+	Navigation
+	--------------------------------------------------------------*/
 
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
 	var MQL = 1170;
@@ -51,7 +53,9 @@ jQuery(document).ready(function($) {
 	});
 	
 
-	/************** Post Background Toggle **************/
+	/*--------------------------------------------------------------
+	Posts background toggle
+	--------------------------------------------------------------*/
 	
 	$(".bg-control").removeClass('active');
   $(".hentry__inside").removeClass('active');
@@ -62,8 +66,9 @@ jQuery(document).ready(function($) {
 		$(this).parent().children(".overlay").toggleClass('active');
 	});	
 
-
-	/************** Gallery Masonry Init **************/
+	/*--------------------------------------------------------------
+	Gallery masonry init
+	--------------------------------------------------------------*/
 
 	var galleries = document.querySelectorAll('.gallery');
 	for ( var i=0, len = galleries.length; i < len; i++ ) {
@@ -79,7 +84,9 @@ jQuery(document).ready(function($) {
 	  });
 	}
 
-	/************** Image Lightbox Init **************/
+	/*--------------------------------------------------------------
+	Image lightbox init
+	--------------------------------------------------------------*/
 
 	$(".entry-content a").attr('data-imagelightbox', '');
 
@@ -97,7 +104,9 @@ jQuery(document).ready(function($) {
 		onEnd:	 	 function() { overlayOff(); }		
 	});
 
-	/************** Search Toggle **************/
+	/*--------------------------------------------------------------
+	Search toggle
+	--------------------------------------------------------------*/
 
 	/* show/hide search form via search icon */
 	$('.site-header .search-trigger').click(function(){
@@ -133,7 +142,9 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	/************** Skip Link Focus **************/
+	/*--------------------------------------------------------------
+	Skip link focus
+	--------------------------------------------------------------*/
 
 	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,

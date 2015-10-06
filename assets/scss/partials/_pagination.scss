@@ -7,8 +7,7 @@
 	float: left;
 	width: 100%;
 	background: $dark-gray;
-	border-bottom: 1px solid transparentize(white, 0.8);	
-	//@include outer-container;
+	border-bottom: 1px solid transparentize(white, 0.92);	
 }
 
 .post-navigation .nav-links,
@@ -68,9 +67,3 @@
 	}	
 
 }
-
-// .post-navigation .nav-links {
-// 	max-width: 920px;
-//   margin-left: auto;
-//   margin-right: auto;	
-// }

@@ -12,15 +12,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php if ( has_post_thumbnail() ) : ?>
-			<article class="hentry single-template has-post-thumbnail">				
-				
+			<article class="hentry single-template has-post-thumbnail">					
 				<?php $yuuka_article_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'yuuta_thumb_large' ); ?>
 				<div class="intro-image" style="background-image: url('<?php echo esc_url($yuuka_article_image[0]); ?>')">
 				
 			<?php else : ?>
 			<article class="hentry single-template has-post-thumbnail">
 				<div class="intro-image">
-				<?php endif; ?>
+			<?php endif; ?>
 				
 					<div class="intro-image__inside">
 						<header class="entry-header">
@@ -29,8 +28,7 @@ get_header(); ?>
 						</header><!-- .entry-header -->
 					</div>	
 					
-					<div class="overlay light-dark is-single"></div>
-					
+					<div class="overlay light-dark is-single"></div>			
 
 				</div>
 
@@ -42,19 +40,19 @@ get_header(); ?>
 							<?php the_content(); ?>
 						<?php endwhile; // end of the loop. ?>
 					
-						<h3 class="archive-title"><?php _e( 'Yearly', 'yuuta' ); ?></h3>
+						<h3 class="archive-title"><?php esc_html_e( 'Yearly', 'yuuta' ); ?></h3>
 						<ul><?php wp_get_archives( array( 'type' => 'yearly', 'limit' => '12', 'show_post_count' => 1 ) ); ?></ul>				
 									
-						<h3 class="archive-title"><?php _e( 'Monthly', 'yuuta' ); ?></h3>
+						<h3 class="archive-title"><?php esc_html_e( 'Monthly', 'yuuta' ); ?></h3>
 						<ul><?php wp_get_archives( array( 'type' => 'monthly', 'limit' => '12', 'show_post_count' => 1 ) ); ?></ul>				
 					
-						<h3 class="archive-title"><?php _e( 'Authors', 'yuuta' ); ?></h3>
+						<h3 class="archive-title"><?php esc_html_e( 'Authors', 'yuuta' ); ?></h3>
 						<ul><?php wp_list_authors(TRUE, TRUE, TRUE); ?></ul>
 					
-						<h3 class="archive-title"><?php _e( 'Categories', 'yuuta' ); ?></h3>
+						<h3 class="archive-title"><?php esc_html_e( 'Categories', 'yuuta' ); ?></h3>
 						<ul><?php wp_list_categories( array( 'title_li' => '', 'show_count' => 1 ) ); ?></ul>				
 					
-						<h3 class="archive-title"><?php _e( 'Tags', 'yuuta' ); ?></h3>
+						<h3 class="archive-title"><?php esc_html_e( 'Tags', 'yuuta' ); ?></h3>
 						<?php wp_tag_cloud('smallest=18&largest=32&unit=px&orderby=count'); ?>			
 
 					</div>

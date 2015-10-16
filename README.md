@@ -8,7 +8,7 @@ Yuuta is a clean and free WordPress theme designed to serve as a visual diary. D
 
 As this is a free theme, support is limited to the basics. You can find me helping out in the designated [support forum](https://wordpress.org/support/theme/yuuta).
 
-However, if you need more than basic help I can offer you [extended customization services](http//drnr.co).
+However, if you need more than basic help I can offer you [extended customization services](http//felixdorner.de).
 
 ## Contributing to Yuuta
 
@@ -21,6 +21,6 @@ Would you like to translate Yuuta in to your language? Get involved at [Transife
 **Felix Dorner**  
 *Berlin-based designer and web developer*
 
-- [Website](http://drnr.co)
+- [Website](http://felixdorner.de)
 - [Twitter](https://twitter.com/felixdorner)
 - [Dribbble](https://www.dribbble.com/felixdorner)

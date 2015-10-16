@@ -1,5 +1,8 @@
 # Yuuta Changelog
 
+### *20151016* - 1.4.1
+* **Fix** Google Webfont loading
+
 ### *20151006* - 1.4.0
 * **New** Added a welcome screen
 * **Tweak** Comments closed information is now hidden

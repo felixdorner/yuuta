@@ -133,7 +133,7 @@ function yuuta_fonts_url() {
 
   /* translators: If there are characters in your language that are not supported by Roboto Slab, translate this to 'off'. Do not translate into your own language. */
   if ( 'off' !== esc_html_x( 'on', 'Roboto Slab font: on or off', 'yuuta' ) ) {
-    $fonts[] = 'Roboto+Slab:400,100,300,700';
+    $fonts[] = 'Roboto Slab:400,100,300,700';
   }
 
   if ( $fonts ) {

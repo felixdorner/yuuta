@@ -1,8 +1,8 @@
 === Yuuta WordPress Theme ===
 Contributers: Felix Dorner
 Requires at least: 3.8
-Tested up to: 4.3.1
-Version: 1.4.1
+Tested up to: 4.4
+Version: 1.5.0
 Donate link: http://felixdorner.de
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,8 +24,18 @@ Yuuta is a clean and free WordPress theme designed to serve as a visual diary. D
 
 == Frequently Asked Questions ==
 
+= How to add a site-logo? =
+
+You need to install the Jetpack plugin. When activated you can assign a site-logo via the customizer.
+
+= How to assign background images? =
+
+To set a post-/page-specific background- or header-image you need to assign a featured image to the designated post(s) or page(s).
+
+= Does this theme support Infinite Scroll? =
+
+Yes. You need to install the Jetpack plugin and activate the feature in the plugin settings.
+
 = I need more help! What should I do? =
 
 As this is a free theme, support is limited to the basics. You can find me helping out in the designated support forum: https://wordpress.org/support/theme/yuuta
-
-However, if you need more than basic help I can offer you extended customization services: http//felixdorner.com

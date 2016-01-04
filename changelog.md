@@ -1,5 +1,13 @@
 # Yuuta Changelog
 
+### *20160104* - 1.5.0
+* **Tweak** Improved comment styles
+* **Tweak** Improved FAQs in readme
+* **Fix** Fixed navigation issues
+* **Fix** Fixed Jetpack infinite scroll compatibility issues
+* **Fix** Fixed enqueuing of the main stylesheet with correct date
+* **Fix** Fixed correct enqueuing of comment scripts
+
 ### *20151016* - 1.4.1
 * **Fix** Google Webfont loading
 

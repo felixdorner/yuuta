@@ -28,7 +28,7 @@
 }
 
 .commentlist {
-	padding: $spacing-m 0 0;
+	padding: 0;
 }
 
 .commentlist li {
@@ -126,11 +126,19 @@
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	color: transparentize($comment-font-color, .4);
+
+	a {
+		color: $comment-font-color;
+	}
+	a:hover {
+		color: transparentize($comment-font-color, .4);
+	}
 }
 
 .commentwrap .pagenav.top {
-	margin: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
+	margin: 0 0 30px;
+	// position: absolute;
+	// top: 0;
+	// right: 0;
 }

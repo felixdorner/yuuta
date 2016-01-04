@@ -5,6 +5,7 @@
 	height: 70px;
 	position: relative;
 	clear: both;
+	margin-bottom: $spacing-m;
 	text-align: center;
 	background-color: $respond-bg-color;
 	
@@ -15,7 +16,7 @@
 
 .respond-active {
 	height: auto !important;
-	padding-bottom: $spacing-s;	
+	padding-bottom: $spacing-s;
 }
 
 /* place comment box above the textfields */

@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------------
 
 	Theme Name: Yuuta
-	Version: 1.4.1
+	Version: 1.5.0
 	Author: Felix Dorner
 	Author URI: http://felixdorner.de
 	Theme URI: http://yuuta.felixdorner.de
@@ -1435,15 +1435,15 @@ header.site-description {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
@@ -1509,28 +1509,28 @@ header.site-description {
 .no-touch .main-navigation a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
-.main-navigation .children {
+.main-navigation .children, .main-navigation .sub-menu {
   padding: 0 0 0 0;
 }
-.main-navigation .children li {
+.main-navigation .children li, .main-navigation .sub-menu li {
   font-size: .6em;
   border: none;
   padding-bottom: .4em;
   padding-top: .4em;
 }
 @media screen and (min-width: 40em) {
-  .main-navigation .children li {
+  .main-navigation .children li, .main-navigation .sub-menu li {
     font-size: .7em;
   }
 }
-.main-navigation .children li ul {
+.main-navigation .children li ul, .main-navigation .sub-menu li ul {
   padding: 0;
 }
-.main-navigation .children li ul li {
+.main-navigation .children li ul li, .main-navigation .sub-menu li ul li {
   padding-bottom: .2em;
   padding-top: .2em;
 }
-.main-navigation .children li:last-child {
+.main-navigation .children li:last-child, .main-navigation .sub-menu li:last-child {
   margin-bottom: 0;
   border: none;
 }
@@ -1794,6 +1794,8 @@ figure.alignleft {
 }
 .page-links a {
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
   border: 1px solid;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -1803,6 +1805,8 @@ figure.alignleft {
 }
 .page-links a:hover {
   opacity: 1;
+  color: black;
+  border-color: black;
 }
 
 /* Entry Footer */
@@ -2281,7 +2285,7 @@ figure.alignleft {
 }
 
 .commentlist {
-  padding: 60px 0 0;
+  padding: 0;
 }
 
 .commentlist li {
@@ -2377,13 +2381,17 @@ figure.alignleft {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  color: rgba(152, 152, 152, 0.6);
+}
+.commentwrap .pagenav a {
+  color: #989898;
+}
+.commentwrap .pagenav a:hover {
+  color: rgba(152, 152, 152, 0.6);
 }
 
 .commentwrap .pagenav.top {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin: 0 0 30px;
 }
 
 /** 19.2 Comment Form */
@@ -2392,6 +2400,7 @@ figure.alignleft {
   height: 70px;
   position: relative;
   clear: both;
+  margin-bottom: 60px;
   text-align: center;
   background-color: #1B1B1B;
   -webkit-border-radius: 4px;

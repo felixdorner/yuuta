@@ -32,7 +32,7 @@
 	  <p class="colophon">
 	  	&copy; <?php echo date('Y'); ?>, <?php bloginfo( 'name' ); ?><br /> 
 	  	<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'yuuta' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'yuuta' ), 'WordPress' ); ?></a><br />
-			<?php printf( __( 'Theme: %1$s by %2$s', 'yuuta' ), 'Yuuta', '<a href="http://felixdorner.com" rel="designer">Felix Dorner</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s', 'yuuta' ), 'Yuuta', '<a href="http://felixdorner.de" rel="designer">Felix Dorner</a>' ); ?>
 	  </p>
 	  
 	</footer>

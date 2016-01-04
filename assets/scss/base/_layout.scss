@@ -2,6 +2,14 @@
 04. Layout
 --------------------------------------------------------------*/
 
+// Not using this solution because when triggering navigation 
+// the site would jump to top every time.
+// body.overflow-hidden {
+//   position: fixed;
+//   overflow: hidden;
+//   width: 100%;  
+// }
+
 .site {
 	@include outer-container(100%);
 }

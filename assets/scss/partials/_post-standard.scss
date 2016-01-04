@@ -188,6 +188,8 @@ figure.alignleft {
   font-size: .6em;
   a {
     text-decoration: none;
+    color: transparentize(black, .6);
+    border-color: transparentize(black, .6);
     border: 1px solid;
     border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -198,6 +200,8 @@ figure.alignleft {
 
   a:hover {
     opacity: 1;
+    color: black;
+    border-color: black;
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "yuuta",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "dependencies": {
     "bourbon": "4.2.5",
     "neat": "1.7.2"

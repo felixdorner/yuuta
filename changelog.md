@@ -1,5 +1,8 @@
 # Yuuta Changelog
 
+### *20160104* - 1.5.1
+* **Fix** Added missing closing tags in footer
+
 ### *20160104* - 1.5.0
 * **Tweak** Improved comment styles
 * **Tweak** Improved FAQs in readme

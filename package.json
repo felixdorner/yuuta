@@ -1,6 +1,6 @@
 {
   "name": "yuuta",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-browser-sync": "^2.0.0",

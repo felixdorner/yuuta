@@ -121,7 +121,7 @@ add_action( 'widgets_init', 'yuuta_widgets_init' );
 /*-----------------------------------------------------------------------------------*/
 
 function yuuta_fonts_url() {
-      
+
   $fonts_url = '';
   $fonts     = array();
   $subsets   = 'latin,latin-ext';
@@ -153,12 +153,12 @@ function yuuta_fonts_url() {
 function yuuta_scripts() {
 	wp_enqueue_style( 'yuuta-fonts', yuuta_fonts_url(), array(), null );
 	wp_enqueue_style( 'yuuta-elegant-icons', get_template_directory_uri() . '/assets/fonts/elegant-icons/elegant-icons.min.css', array(), '1' );
-	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20160104' );	
+	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20160307' );	
 	wp_enqueue_script( 'yuuta-lightbox', get_template_directory_uri() . '/assets/js/imagelightbox.min.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'yuuta-scripts', get_template_directory_uri() . '/assets/js/theme.js', array('jquery', 'masonry'), '20150327', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );		
+		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && comments_open() ) {
@@ -182,7 +182,7 @@ require get_template_directory() . '/inc/plugins/jetpack.php';
 
 /**
  * IMPORTANT NOTE:
- * Do not add any custom code here. Please use a child theme so that your 
+ * Do not add any custom code here. Please use a child theme so that your
  * customizations aren't lost after updates.
  * http://codex.wordpress.org/Child_Themes
  */

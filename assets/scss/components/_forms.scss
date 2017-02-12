@@ -17,7 +17,7 @@ select {
   font-size: $form-font-size;
 }
 
-label {  
+label {
   margin-bottom: $spacing-xs;
 
   &.required:after {
@@ -37,7 +37,7 @@ select[multiple=multiple] {
   background-color: transparent;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
-  box-shadow: none; 
+  box-shadow: none;
   padding: ($base-spacing / 3) ($base-spacing / 3);
   width: 100%;
 
@@ -45,12 +45,18 @@ select[multiple=multiple] {
     opacity: 1;
   }
 
-  &:focus {    
+  &:focus {
     box-shadow: none;
     outline: none;
     opacity: 1;
   }
 
+}
+
+.entry-content textarea,
+.entry-content #{$all-text-inputs},
+.entry-content  select[multiple=multiple] {
+  border: 1px solid $light-gray;
 }
 
 textarea {

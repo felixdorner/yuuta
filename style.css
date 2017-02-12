@@ -1,15 +1,15 @@
 /*---------------------------------------------------------------------------------
 
 	Theme Name: Yuuta
-	Version: 1.5.1
+	Version: 1.6.1
 	Author: Felix Dorner
-	Author URI: http://felixdorner.de
-	Theme URI: http://yuuta.felixdorner.de
+	Author URI: https://felixdorner.de
+	Theme URI: https://yuuta.felixdorner.de
 	Description: Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
 	License: GNU GENERAL PUBLIC LICENSE, Version 2
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: yuuta
-	Tags: black, white, light, fluid-layout, responsive-layout, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, threaded-comments, translation-ready, photoblogging
+	Tags: one-column, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, threaded-comments, translation-ready, blog, holiday, photography
 
 	Normalizing styles have been helped along thanks to the fine work of
 	Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -495,7 +495,7 @@ blockquote, q {
 .site::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .site-content {
@@ -598,7 +598,7 @@ blockquote, q {
 .footer-links::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 aside {
@@ -629,7 +629,7 @@ aside:last-child {
   aside::after {
     clear: both;
     content: "";
-    display: table;
+    display: block;
   }
 }
 
@@ -688,6 +688,12 @@ select[multiple=multiple]:focus {
   box-shadow: none;
   outline: none;
   opacity: 1;
+}
+
+.entry-content textarea,
+.entry-content input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+.entry-content select[multiple=multiple] {
+  border: 1px solid #F0F0F0;
 }
 
 textarea {
@@ -1059,6 +1065,98 @@ dl dd {
   left: 0;
 }
 
+/* ACTIVITY INDICATION */
+#imagelightbox-loading,
+#imagelightbox-loading div {
+  border-radius: 50%;
+}
+
+#imagelightbox-loading {
+  width: 2.5em;
+  /* 40 */
+  height: 2.5em;
+  /* 40 */
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10003;
+  top: 50%;
+  left: 50%;
+  padding: 0.625em;
+  /* 10 */
+  margin: -1.25em 0 0 -1.25em;
+  /* 20 */
+  -webkit-box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.75);
+  /* 40 */
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.75);
+  /* 40 */
+}
+
+#imagelightbox-loading div {
+  width: 1.25em;
+  /* 20 */
+  height: 1.25em;
+  /* 20 */
+  background-color: #fff;
+  -webkit-animation: imagelightbox-loading .5s ease infinite;
+  animation: imagelightbox-loading .5s ease infinite;
+}
+
+@-webkit-keyframes imagelightbox-loading {
+  from {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  to {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+  }
+}
+@keyframes imagelightbox-loading {
+  from {
+    opacity: .5;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .5;
+    transform: scale(0.75);
+  }
+}
+#imagelightbox-loading,
+#imagelightbox-overlay {
+  -webkit-animation: fade-in .25s linear;
+  animation: fade-in .25s linear;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 41.25em) {
+  #container {
+    width: 100%;
+  }
+}
 /**
  * Responsive settings for WordPress Gallery
  */
@@ -1168,11 +1266,14 @@ dl dd {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: .875em;
+  width: 80%;
 }
 .site-branding img {
-  display: block;
+  display: inline-block;
   max-height: 30px;
   width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 @media screen and (min-width: 40em) {
   .site-branding {
@@ -1187,6 +1288,8 @@ dl dd {
   display: inline-block;
   font-weight: 700;
   margin: 0;
+  vertical-align: middle;
+  max-width: 80%;
 }
 .site-title a {
   color: black;
@@ -1228,7 +1331,7 @@ header.site-description {
 .search-trigger:before::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 .search-trigger.search-form--active:before {
   font-size: 1.6em;
@@ -1600,7 +1703,7 @@ header.site-description {
 .taxonomy-description::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 .taxonomy-description p {
   margin: 0;
@@ -1689,9 +1792,9 @@ header.site-description {
 }
 
 /* Entry Content */
-.home .has-post-thumbnail .page-content,
-.home .has-post-thumbnail .entry-content,
-.home .has-post-thumbnail .entry-summary,
+.blog .has-post-thumbnail .page-content,
+.blog .has-post-thumbnail .entry-content,
+.blog .has-post-thumbnail .entry-summary,
 .search .has-post-thumbnail .page-content,
 .search .has-post-thumbnail .entry-content,
 .search .has-post-thumbnail .entry-summary,
@@ -1724,6 +1827,11 @@ header.site-description {
   opacity: .6;
   text-decoration: none;
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+.page .entry-content a,
+.single .entry-content a {
+  border-color: #F0F0F0;
 }
 
 .entry-content figure a:hover {
@@ -1896,7 +2004,7 @@ figure.alignleft {
 .bg-control:before::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .active.bg-control:before {
@@ -1979,7 +2087,7 @@ figure.alignleft {
 .format-gallery .entry-header:before::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .format-link .entry-header:before {
@@ -2382,6 +2490,10 @@ figure.alignleft {
   -moz-box-shadow: none;
   box-shadow: none;
   color: rgba(152, 152, 152, 0.6);
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .2em;
+  line-height: 1.2em;
 }
 .commentwrap .pagenav a {
   color: #989898;
@@ -2392,6 +2504,13 @@ figure.alignleft {
 
 .commentwrap .pagenav.top {
   margin: 0 0 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(152, 152, 152, 0.2);
+}
+
+.commentwrap .pagenav.bottom {
+  padding-top: 15px;
+  border-top: 1px solid rgba(152, 152, 152, 0.2);
 }
 
 /** 19.2 Comment Form */
@@ -2693,7 +2812,7 @@ figure.alignleft {
 .footer-branding::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .footer-links {

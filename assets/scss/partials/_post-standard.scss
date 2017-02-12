@@ -10,7 +10,7 @@
 .sticky-tag {
   display: inline-block;
   font-size: .6em;
-  text-transform: uppercase;    
+  text-transform: uppercase;
   border: 1px solid;
   padding: .4em .6em .2em;
   margin-bottom: $spacing-xs;
@@ -28,7 +28,7 @@
   text-align: center;
 
 	hr {
-    margin: $spacing-s auto 0;    
+    margin: $spacing-s auto 0;
     width: 6em;
     border-color: inherit;
     opacity: 1;
@@ -41,7 +41,7 @@
   text-transform: uppercase;
 
   a {
-    color: inherit;  
+    color: inherit;
   }
 
   @include media($medium-screen) {
@@ -59,7 +59,7 @@
   margin-top: 1em;
 
   a {
-    color: inherit;  
+    color: inherit;
   }
 
   @include media($medium-screen) {
@@ -84,9 +84,9 @@
 
 /* Entry Content */
 
-.home .has-post-thumbnail .page-content,
-.home .has-post-thumbnail .entry-content,
-.home .has-post-thumbnail .entry-summary,
+.blog .has-post-thumbnail .page-content,
+.blog .has-post-thumbnail .entry-content,
+.blog .has-post-thumbnail .entry-summary,
 .search .has-post-thumbnail .page-content,
 .search .has-post-thumbnail .entry-content,
 .search .has-post-thumbnail .entry-summary,
@@ -110,12 +110,17 @@
   opacity: 1;
   text-decoration: none;
   border-bottom: 2px solid;
-  border-color: transparentize(white, .4); 
+  border-color: transparentize(white, .4);
   &:hover {
     opacity: .6;
     text-decoration: none;
-    border-color: transparentize(white, .6); 
+    border-color: transparentize(white, .6);
   }
+}
+
+.page .entry-content a,
+.single .entry-content a {
+  border-color: $light-gray;
 }
 
 .entry-content figure a:hover {
@@ -233,7 +238,7 @@ figure.alignleft {
 
   }
 
-  .cat-links a {    
+  .cat-links a {
     border: 1px solid;
     padding: .4em .6em;
     margin: .4em;
@@ -248,12 +253,12 @@ figure.alignleft {
 
 .read-leave-comments {
   text-transform: uppercase;
-  display: inline-block;    
+  display: inline-block;
   margin-bottom: $spacing-s;
-  
+
   @extend %btn-outlined-rounded;
 
-  &:hover {    
+  &:hover {
     opacity: .4;
   }
 }
@@ -269,17 +274,17 @@ figure.alignleft {
 .bg-control {
   @include transition(all 0.4s linear);
   position: absolute;
-  display: block;  
+  display: block;
   left:0;
   right:0;
   bottom: 30px;
   margin-left:auto;
-  margin-right:auto;  
+  margin-right:auto;
   z-index: 2;
   cursor: pointer;
   color: white;
   opacity: .6;
-  
+
   &:hover {
     color: white;
     opacity: 1;
@@ -294,7 +299,7 @@ figure.alignleft {
 .bg-control:before {
   width: 100%;
   @include row();
-  font-family: "ElegantIcons";    
+  font-family: "ElegantIcons";
   font-weight: 300;
   text-align: center;
   content: '\5c';

@@ -6,7 +6,7 @@
 $header-height-S: 50px;
 $header-height-M: 80px;
 
-// z-index 
+// z-index
 $content-zindex: 1;
 $nav-zindex: 3;
 $header-zindex: 4;
@@ -25,12 +25,12 @@ $header-zindex: 4;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: $header-height-M;	
+	height: $header-height-M;
 	z-index: $header-zindex;
 	border-bottom: 1px solid #eee;
 
 	@include media($medium-screen) {
-		
+
 		@include transition(background-color .3s);
 
 		/* Force Hardware Acceleration in WebKit */
@@ -55,7 +55,7 @@ $header-zindex: 4;
 
 		&.menu-is-open {
 			/* add a background color to the header when the navigation is open */
-			background-color: rgba(black, 0);			
+			background-color: rgba(black, 0);
 		}
 
 	}
@@ -66,11 +66,14 @@ $header-zindex: 4;
 	position: absolute;
 	@include center(y);
 	left: .875em;
+  width: 80%;
 
 	img {
-		display: block;
+		display: inline-block;
 		max-height: 30px;
 		width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
 	}
 
 	@include media($medium-screen) {
@@ -86,6 +89,8 @@ $header-zindex: 4;
   display: inline-block;
   font-weight: 700;
   margin: 0;
+  vertical-align: middle;
+  max-width: 80%;
 
   a {
     color: black;
@@ -93,7 +98,7 @@ $header-zindex: 4;
 
 }
 
-.site-description {  
+.site-description {
 	font-family: $base-font-family;
   font-size: .6em;
   letter-spacing: .1em;
@@ -108,7 +113,7 @@ header.site-description {
 /** Menu-Icons */
 
 .search-trigger {
-	position: absolute;	
+	position: absolute;
 	right: 40px;
 	top: 28px;
 	width: 40px;
@@ -123,7 +128,7 @@ header.site-description {
 		width: 100%;
     @include row();
 
-    font-family: "ElegantIcons";    
+    font-family: "ElegantIcons";
     font-weight: normal;
     text-align: center;
 
@@ -146,11 +151,11 @@ header.site-description {
 	right: 60px;
 	top: 0;
 	width: 80px;
-	opacity: 0;	
+	opacity: 0;
 	display: none;
 
 	@include media($medium-screen) {
-		right: 110px;		
+		right: 110px;
 	}
 
 	@include media($large-screen) {
@@ -158,20 +163,20 @@ header.site-description {
 	}
 
 	input.search-field {
-		width: 80px;	
+		width: 80px;
 		font-size: .8em;
 		@include border-width(0 0 0 0);
 		padding: .4em .4em .4em 0;
 
 		-webkit-border-radius: 0;
 	  -moz-border-radius: 0;
-	  border-radius: 0;		
+	  border-radius: 0;
 
 		&:active, &:focus, &:visited {
 			-webkit-box-shadow: none;
 			-moz-box-shadow: none;
 			box-shadow: none;
-		} 
+		}
 
 		@include placeholder {
 	    color: black;
@@ -207,12 +212,12 @@ header.site-description {
 		height: 4px;
 		background-color: black;
 		@include transition(background-color .3s);
-		
+
 		/* these are the upper and lower lines in the menu icon */
 		&::before, &:after {
 			content: '';
 			width: 100%;
-			height: 100%; 
+			height: 100%;
 			position: absolute;
 			background-color: black;
 			right: 0;
@@ -221,7 +226,7 @@ header.site-description {
 			-moz-transition: -moz-transform .3s, top .3s, background-color 0s;
 			transition: transform .3s, top .3s, background-color 0s;
 		}
-		
+
 		&::before {
 			top: -7px;
 		}

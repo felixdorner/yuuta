@@ -1,6 +1,6 @@
 /** 19.1 Comments */
 
-.comments-nopassword {	
+.comments-nopassword {
 	color: $comment-font-color;
 	border-bottom: 1px solid;
 	border-color: transparentize($comment-font-color, .8);
@@ -34,13 +34,13 @@
 .commentlist li {
 	margin: 0 0 $spacing-m;
 	list-style: none;
-	position: relative;	
+	position: relative;
 }
 
 .commentlist .children li {
 	padding: 0;
 	margin-top: $spacing-m;
-	
+
 	@include media($medium-screen) {
 		padding: 0 0 0 $spacing-l;
 	}
@@ -71,7 +71,7 @@
 }
 
 .comment-author, .comment-time {
-	text-transform: uppercase;	
+	text-transform: uppercase;
 	font-size: .8em;
 	display: block;
 }
@@ -83,17 +83,17 @@
 }
 
 .comment-time {
-	padding-top: 2px;	
+	padding-top: 2px;
 	color: $comment-font-color;
 }
 
 .comment-container {
-	overflow: hidden;	
+	overflow: hidden;
 	min-height: 60px;
 }
 
 .comment-entry {
-	font-size: 1.2em;	
+	font-size: 1.2em;
 	color: $comment-font-color;
 	margin: $spacing-xs 0 5px 0;
 	display: block;
@@ -106,10 +106,10 @@
 	font-size: .6em;
 
 	color: $comment-font-color;
-	
+
 	float:left;
 	margin:20px 0 0 0;
-	
+
 	@extend %btn-outlined-rounded;
 
 	@include transition(all 0.2s linear);
@@ -127,6 +127,10 @@
 	-moz-box-shadow: none;
 	box-shadow: none;
 	color: transparentize($comment-font-color, .4);
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .2em;
+  line-height: 1.2em;
 
 	a {
 		color: $comment-font-color;
@@ -138,7 +142,11 @@
 
 .commentwrap .pagenav.top {
 	margin: 0 0 30px;
-	// position: absolute;
-	// top: 0;
-	// right: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid transparentize($comment-font-color, .8);
+}
+
+.commentwrap .pagenav.bottom {
+  padding-top: 15px;
+  border-top: 1px solid transparentize($comment-font-color, .8);
 }

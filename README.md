@@ -19,7 +19,7 @@ Would you like to translate Yuuta in to your language? Get involved [here](https
 ## Author
 
 **Felix Dorner**  
-*Berlin-based designer and web developer*
+*Design and development*
 
 - [Website](http://felixdorner.de)
 - [Twitter](https://twitter.com/felixdorner)

@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 		$(window).on('scroll',
 		{
 	        previousTop: 0
-	    }, 
+	    },
 	    function () {
 		    var currentTop = $(window).scrollTop();
 		    //check if user is scrolling up
@@ -37,9 +37,9 @@ jQuery(document).ready(function($) {
 
 	//open/close primary navigation
 	$('.primary-nav-trigger').on('click', function(){
-		$('.menu-icon').toggleClass('is-clicked'); 
+		$('.menu-icon').toggleClass('is-clicked');
 		$('.site-header').toggleClass('menu-is-open');
-		
+
 		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $('.site-navigation-wrapper').hasClass('is-visible') ) {
 			$('.site-navigation-wrapper').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
@@ -48,23 +48,20 @@ jQuery(document).ready(function($) {
 		} else {
 			$('.site-navigation-wrapper').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').addClass('overflow-hidden');
-			});	
+			});
 		}
 	});
-	
+
 
 	/*--------------------------------------------------------------
 	Posts background toggle
 	--------------------------------------------------------------*/
-	
 	$(".bg-control").removeClass('active');
   $(".hentry__inside").removeClass('active');
   $(".overlay").removeClass('active');
-	$(".bg-control").click(function() {    
 		$(this).parent().children(".bg-control").toggleClass('active');
 		$(this).parent().children(".hentry__inside").toggleClass('active');
 		$(this).parent().children(".overlay").toggleClass('active');
-	});	
 
 	/*--------------------------------------------------------------
 	Gallery masonry init
@@ -91,17 +88,13 @@ jQuery(document).ready(function($) {
 	$(".entry-content a").attr('data-imagelightbox', '');
 
 	// Overlay
-	var overlayOn = function() {
 		$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
 	},
 	overlayOff = function() {
-		$( '#imagelightbox-overlay' ).remove(); 
 	}
 
 	// Init with Overlay
-	$( 'a[data-imagelightbox]' ).imageLightbox({
 		onStart: 	 function() { overlayOn(); },
-		onEnd:	 	 function() { overlayOff(); }		
 	});
 
 	/*--------------------------------------------------------------
@@ -113,7 +106,6 @@ jQuery(document).ready(function($) {
 		if( $('.site-header .search-form').hasClass('search-form--active') )
 		{
 			/* hide search field */
-			$('.site-header .search-form').removeClass('search-form--active');			
 			return false;
 		}
 		else
@@ -131,13 +123,11 @@ jQuery(document).ready(function($) {
 		if( $('.site-header .search-trigger').hasClass('search-form--active') )
 		{
 			/* hide search field */
-			$('.site-header .search-trigger').removeClass('search-form--active');			
 			return false;
 		}
 		else
 		{
 			/* show search field */
-			$('.site-header .search-trigger').addClass('search-form--active');			
 			return false;
 		}
 	});
@@ -164,4 +154,3 @@ jQuery(document).ready(function($) {
 		}, false );
 	}
 
-});

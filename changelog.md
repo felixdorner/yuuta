@@ -1,5 +1,20 @@
 # Yuuta Changelog
 
+### *20170212* - 1.6.1
+* **Fix** Static mode page content is not hidden anymore
+* **Dev** Added a possibility to close the overlay on click of a menu-item 
+
+### *20170211* - 1.6.0
+* **New** Support for native custom logo
+* **Fix** Forms of entry-content have a border again
+* **Fix** Content links are more recognizable
+* **Fix** Long site-titles won't overlap search and nav-icon anymore on smaller devices
+* **Tweak** Added activity indicator for ligthbox
+* **Tweak** Improved styles for comments pagination
+* **Tweak** Removed admin screen
+* **Tweak** Added a "How to add featured images" section to readme
+* **Dev** Updated NPM and Bower dependencies
+
 ### *20160104* - 1.5.1
 * **Fix** Added missing closing tags in footer
 

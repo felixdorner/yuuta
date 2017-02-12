@@ -86,10 +86,17 @@ function yuuta_setup() {
 	) );
 
 	/*
-	 * Enable support for Site Logo
+	 * Enable support for Site Logo from Jetpack
 	 * See http://jetpack.me/support/site-logo/
 	 */
 	add_theme_support( 'site-logo' );
+
+  /*
+	 * Enable support for a custom logo
+	 */
+  add_theme_support( 'custom-logo', array(
+		'header-text' => array( 'site-title' )
+	) );
 
 }
 endif; // yuuta_setup
@@ -153,17 +160,17 @@ function yuuta_fonts_url() {
 function yuuta_scripts() {
 	wp_enqueue_style( 'yuuta-fonts', yuuta_fonts_url(), array(), null );
 	wp_enqueue_style( 'yuuta-elegant-icons', get_template_directory_uri() . '/assets/fonts/elegant-icons/elegant-icons.min.css', array(), '1' );
-	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20160307' );	
-	wp_enqueue_script( 'yuuta-lightbox', get_template_directory_uri() . '/assets/js/imagelightbox.min.js', array('jquery'), '1', true );
-	wp_enqueue_script( 'yuuta-scripts', get_template_directory_uri() . '/assets/js/theme.js', array('jquery', 'masonry'), '20150327', true );
+	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20170212' );
+	wp_enqueue_script( 'yuuta-lightbox', get_template_directory_uri() . '/assets/js/imagelightbox.min.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'yuuta-scripts', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery', 'masonry' ), '20170212', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && comments_open() ) {
-		wp_enqueue_script( 'yuuta-autogrow-textarea', get_template_directory_uri() . '/assets/js/jquery.autogrow-textarea.js', array('jquery'), '1', true );
-		wp_enqueue_script( 'yuuta-comment-form', get_template_directory_uri() . '/assets/js/comment-form.js', array('jquery'), '20150308', true );
+		wp_enqueue_script( 'yuuta-autogrow-textarea', get_template_directory_uri() . '/assets/js/jquery.autogrow-textarea.js', array( 'jquery' ), '1', true );
+		wp_enqueue_script( 'yuuta-comment-form', get_template_directory_uri() . '/assets/js/comment-form.js', array( 'jquery' ), '20150308', true );
 	}
 
 }
@@ -173,12 +180,11 @@ add_action( 'wp_enqueue_scripts', 'yuuta_scripts' );
 /* Includes
 /*-----------------------------------------------------------------------------------*/
 
-require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 require get_template_directory() . '/inc/comments.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/plugins/jetpack.php';
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * IMPORTANT NOTE:

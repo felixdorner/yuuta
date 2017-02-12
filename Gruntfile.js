@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           src : ['style.css', 'assets/js/*.js']
         },
         options: {
-          proxy: "yuuta.felixdorner.dev",
+          proxy: "yuuta.dev",
           watchTask: true,
           notify: false
         }
@@ -43,28 +43,28 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      build: ["yuuta"],          
+      build: ["yuuta"],
     },
 
     copy: {
       build: {
-        expand: true, 
+        expand: true,
         src: [
           '**/*',
-          '!**/node_modules/**', 
-          '!**/bower_components/**', 
-          '!**/.sass-cache/**', 
-          '!**/.git/**', 
-          '!**/scss/**', 
-          '!Gruntfile.js', 
-          '!package.json', 
-          '!bower.json',          
+          '!**/node_modules/**',
+          '!**/bower_components/**',
+          '!**/.sass-cache/**',
+          '!**/.git/**',
+          '!**/scss/**',
+          '!Gruntfile.js',
+          '!package.json',
+          '!bower.json',
           '!.gitignore',
           '!.DS_store',
           '!yuuta.zip',
           '!README.md',
           '!changelog.md'
-        ], 
+        ],
         dest: 'yuuta/'
       },
     },

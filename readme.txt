@@ -1,12 +1,12 @@
 === Yuuta WordPress Theme ===
 Contributers: Felix Dorner
 Requires at least: 3.8
-Tested up to: 4.4
-Version: 1.5.0
-Donate link: http://felixdorner.de
+Tested up to: 4.7
+Version: 1.6.1
+Donate link: https://felixdorner.de
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, white, dark, light, fluid-layout, responsive-layout, custom-colors, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+Tags: one-column, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, threaded-comments, translation-ready, blog, holiday, photography
 
 Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats you can create a pretty diversified blog.
 
@@ -26,11 +26,15 @@ Yuuta is a clean and free WordPress theme designed to serve as a visual diary. D
 
 = How to add a site-logo? =
 
-You need to install the Jetpack plugin. When activated you can assign a site-logo via the customizer.
+Just use the customizer to upload and assign a logo.
 
 = How to assign background images? =
 
 To set a post-/page-specific background- or header-image you need to assign a featured image to the designated post(s) or page(s).
+
+= How to assign a featured image above a post title? =
+
+A so-called featured image can be assigned via the controls on the right side when editing a page or post in WordPress.
 
 = Does this theme support Infinite Scroll? =
 

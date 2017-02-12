@@ -1,8 +1,8 @@
 # Yuuta Changelog
 
-### *20170212* - 1.6.1
+### *20170212* - 1.6.1 - 1.6.2
 * **Fix** Static mode page content is not hidden anymore
-* **Dev** Added a possibility to close the overlay on click of a menu-item 
+* **Dev** Added a possibility to close the overlay on click of a menu-item
 
 ### *20170211* - 1.6.0
 * **New** Support for native custom logo

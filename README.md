@@ -4,7 +4,7 @@
 
 Yuuta is a clean and free WordPress theme designed to serve as a visual diary. Due to support of all post formats the theme is capable of displaying a pretty diversified blog.
 
-[Live Demo](http://yuuta.felixdorner.de) / [Download Theme](https://wordpress.org/themes/yuuta)
+[Live Demo](https://yuuta.felixdorner.de) / [Download Theme](https://wordpress.org/themes/yuuta)
 
 ## Support
 
@@ -21,6 +21,6 @@ Would you like to translate Yuuta in to your language? Get involved [here](https
 **Felix Dorner**  
 *Design and development*
 
-- [Website](http://felixdorner.de)
+- [Website](https://felixdorner.de)
 - [Twitter](https://twitter.com/felixdorner)
 - [Dribbble](https://www.dribbble.com/felixdorner)

@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-  // Uncomment to close to overlay navigation on click of a menu item
+  // Uncomment to close the overlay navigation on click of a menu item
   // $( '.site-navigation-wrapper .menu-item a' ).on('click', function() {
 	// 	$('.site-navigation-wrapper').removeClass( 'is-visible' );
 	// 	$('site-header').toggleClass('menu-is-open');

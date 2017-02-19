@@ -63,7 +63,8 @@ module.exports = function(grunt) {
           '!.DS_store',
           '!yuuta.zip',
           '!README.md',
-          '!changelog.md'
+          '!changelog.md',
+          '!npm-debug.log'
         ],
         dest: 'yuuta/'
       },

@@ -160,7 +160,7 @@ function yuuta_fonts_url() {
 function yuuta_scripts() {
 	wp_enqueue_style( 'yuuta-fonts', yuuta_fonts_url(), array(), null );
 	wp_enqueue_style( 'yuuta-elegant-icons', get_template_directory_uri() . '/assets/fonts/elegant-icons/elegant-icons.min.css', array(), '1' );
-	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20170212' );
+	wp_enqueue_style( 'yuuta-style', get_stylesheet_uri(), array(), '20171227' );
 	wp_enqueue_script( 'yuuta-lightbox', get_template_directory_uri() . '/assets/js/imagelightbox.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'yuuta-scripts', get_template_directory_uri() . '/assets/js/theme.js', array( 'jquery', 'masonry' ), '20170212', true );
 

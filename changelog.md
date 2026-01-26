@@ -2,6 +2,9 @@
 
 ### *20260126* - 1.6.4
 * **Fix** PHP 8+ compatibility in comments.php
+* **Fix** Add wp_body_open() call in header.php
+* **Fix** Add missing style.css headers (Tested up to, Requires PHP)
+* **Fix** Remove incompatible photo credit from readme.txt
 
 ### *20170212* - 1.6.1 - 1.6.2
 * **Fix** Static mode page content is not hidden anymore

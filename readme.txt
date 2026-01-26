@@ -2,7 +2,7 @@
 Contributors: Felix Dorner
 Requires at least: WordPress 3.8
 Tested up to: WordPress 4.9
-Version: 1.6.3
+Version: 1.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, threaded-comments, translation-ready, blog, holiday, photography
@@ -82,7 +82,3 @@ Source: https://necolas.github.io/normalize.css/
 Elegant icons, Copyright 2013 Elegant Themes Inc.
 License: GPL 2.0 and MIT
 Source: https://www.elegantthemes.com/blog/resources/elegant-icon-font
-
-Photo in Screenshot, Copyright 2017 Pixabay
-License: CC0
-Source: https://pixabay.com/en/young-girl-woman-brunette-bun-691791/

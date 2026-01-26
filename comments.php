@@ -14,8 +14,11 @@ endif;
 <div id="comments" class="commentwrap">
 	<div class="comments-wrapper">
 		
-		<?php if ( have_comments() || comments_open() ) :		
-		
+		<?php if ( have_comments() || comments_open() ) :
+
+			$commenter = wp_get_current_commenter();
+			global $user_identity;
+
 			$custom_comment_form = array( 
 				'fields' => apply_filters( 'comment_form_default_fields', 
 					array(

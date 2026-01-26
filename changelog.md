@@ -1,5 +1,8 @@
 # Yuuta Changelog
 
+### *20260126* - 1.6.4
+* **Fix** PHP 8+ compatibility in comments.php
+
 ### *20170212* - 1.6.1 - 1.6.2
 * **Fix** Static mode page content is not hidden anymore
 * **Dev** Added a possibility to close the overlay on click of a menu-item

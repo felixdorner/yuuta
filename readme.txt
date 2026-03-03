@@ -57,7 +57,7 @@ Get involved here: https://translate.wordpress.org/projects/wp-themes/yuuta
 
 == Copyright ==
 
-Yuuta WordPress Theme, Copyright 2016 WordPress.org
+Yuuta WordPress Theme, Copyright 2016-2026 Felix Dorner
 Yuuta is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -84,6 +84,5 @@ Elegant icons, Copyright 2013 Elegant Themes Inc.
 License: GPL 2.0 and MIT
 Source: https://www.elegantthemes.com/blog/resources/elegant-icon-font
 
-Photo in Screenshot, Copyright 2017 Pixabay
-License: CC0
-Source: https://pixabay.com/en/young-girl-woman-brunette-bun-691791/
+Photo in Screenshot, Copyright Felix Dorner
+License: GPLv2 or later

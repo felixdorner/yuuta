@@ -47,7 +47,7 @@ get_header(); ?>
 						<ul><?php wp_get_archives( array( 'type' => 'monthly', 'limit' => '12', 'show_post_count' => 1 ) ); ?></ul>				
 					
 						<h3 class="archive-title"><?php esc_html_e( 'Authors', 'yuuta' ); ?></h3>
-						<ul><?php wp_list_authors(TRUE, TRUE, TRUE); ?></ul>
+						<ul><?php wp_list_authors( array( 'optioncount' => true, 'exclude_admin' => false ) ); ?></ul>
 					
 						<h3 class="archive-title"><?php esc_html_e( 'Categories', 'yuuta' ); ?></h3>
 						<ul><?php wp_list_categories( array( 'title_li' => '', 'show_count' => 1 ) ); ?></ul>				

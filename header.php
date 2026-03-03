@@ -49,11 +49,11 @@
 
 			<?php get_search_form(); ?>
 
-			<a class="primary-nav-trigger" href="javascript:void(0)">
+			<a class="primary-nav-trigger" href="#" role="button">
 				<span class="menu-icon"></span>
 			</a>
 
-			<a class="search-trigger" href="javascript:void(0)"></a>
+			<a class="search-trigger" href="#" role="button"></a>
 
 		</header>
 

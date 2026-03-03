@@ -18,7 +18,7 @@
 		<?php if ( is_sticky() ) { ?>
 			<header class="entry-header">			
 				<span class="sticky-tag">
-					<?php echo esc_html_e( 'Featured', 'yuuta' ); ?>
+					<?php esc_html_e( 'Featured', 'yuuta' ); ?>
 				</span>			
 			</header>
 		<?php } ?>

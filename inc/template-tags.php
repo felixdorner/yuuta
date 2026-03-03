@@ -110,7 +110,7 @@ if ( ! function_exists( 'yuuta_read_leave_comments' ) ) :
 		global $more;
 		
 		if (
-			( strpos( get_the_content(), 'more-link' ) != false ) &&
+			( strpos( get_the_content(), 'more-link' ) !== false ) &&
 			( comments_open( $post->ID ) )
 		) : ?>
 
@@ -122,7 +122,7 @@ if ( ! function_exists( 'yuuta_read_leave_comments' ) ) :
 			</a>
 
 		<?php elseif (
-			( strpos( get_the_content(), 'more-link' ) != false )
+			( strpos( get_the_content(), 'more-link' ) !== false )
 		) : ?>
 
 			<a class="read-leave-comments" href="<?php the_permalink(); ?>">

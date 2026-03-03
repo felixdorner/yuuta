@@ -19,7 +19,7 @@
 			
 			<?php if ( is_sticky() ) { ?>
 				<span class="sticky-tag">
-					<?php echo esc_html_e('Featured', 'yuuta'); ?>
+					<?php esc_html_e( 'Featured', 'yuuta' ); ?>
 				</span>
 			<?php } ?>
 			

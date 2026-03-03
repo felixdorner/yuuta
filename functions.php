@@ -98,6 +98,26 @@ function yuuta_setup() {
 		'header-text' => array( 'site-title' )
 	) );
 
+	// Block editor support.
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'align-wide' );
+
+	// Custom header support.
+	add_theme_support( 'custom-header', array(
+		'default-image' => '',
+		'width'         => 1400,
+		'height'        => 400,
+		'flex-height'   => true,
+		'flex-width'    => true,
+		'header-text'   => true,
+	) );
+
+	// Custom background support.
+	add_theme_support( 'custom-background', array(
+		'default-color' => 'ffffff',
+	) );
+
 }
 endif; // yuuta_setup
 add_action( 'after_setup_theme', 'yuuta_setup' );

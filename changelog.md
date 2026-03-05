@@ -1,5 +1,13 @@
 # Yuuta Changelog
 
+### *20260305* - 1.6.5
+* **Fix** PHP 8+ compatibility across theme (comments, template tags)
+* **Fix** WordPress.org theme check required and recommended issues
+* **Fix** XSS vulnerability in search results
+* **Fix** Incorrect esc_html_e() usage in template parts
+* **New** Block editor support (block styles, responsive embeds, wide alignment)
+* **New** Custom header and custom background support
+
 ### *20260126* - 1.6.4
 * **Fix** PHP 8+ compatibility in comments.php
 

@@ -105,24 +105,26 @@ if ( ! function_exists( 'yuuta_read_leave_comments' ) ) :
 	 *
 	 * @since 1.4.0
 	 */
-	function yuuta_read_leave_comments() {	
+	function yuuta_read_leave_comments() {
 		global $post;
 		global $more;
-		
+
+		$content = (string) get_the_content();
+
 		if (
-			( strpos( get_the_content(), 'more-link' ) !== false ) &&
+			( strpos( $content, 'more-link' ) !== false ) &&
 			( comments_open( $post->ID ) )
 		) : ?>
 
-			<a class="read-leave-comments" href="<?php the_permalink(); ?>">			
+			<a class="read-leave-comments" href="<?php the_permalink(); ?>">
 				<?php
-				esc_html_e( 'Read More & ', 'yuuta' );				
+				esc_html_e( 'Read More & ', 'yuuta' );
 				comments_number( __( 'Comment', 'yuuta' ), __( 'View one comment', 'yuuta' ), __( 'View % comments', 'yuuta' ) );
 				?>
 			</a>
 
 		<?php elseif (
-			( strpos( get_the_content(), 'more-link' ) !== false )
+			( strpos( $content, 'more-link' ) !== false )
 		) : ?>
 
 			<a class="read-leave-comments" href="<?php the_permalink(); ?>">
@@ -316,7 +318,7 @@ add_action( 'save_post',     'yuuta_category_transient_flusher' );
  */
 function yuuta_password_form() {
     global $post;
-    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $label = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post" class="post-password-form">
     ' . __( 'To view this protected post, enter the password below:', 'yuuta' ) . '
     <label for="' . $label . '">' . __( 'Password:', 'yuuta' ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( 'Submit', 'yuuta' ) . '" />
